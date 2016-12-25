@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>About-Ian Carrasco</title>
-	<link rel="import" href="../topbar.html">
 </head>
 <body>
+	<?php include("../topbar.php"); ?>
 	<h1>About</h1>
 </body>
 </html>
