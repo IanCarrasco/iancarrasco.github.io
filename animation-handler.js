@@ -11,3 +11,6 @@ $("#close-expand").click(function(){
 	$("#close-expand").css({"visibility":"hidden","opacity":"0"})
 
 });
+
+//PARTICLE BACKGROUND
+particlesJS.load('particle-container', './assets/particlesjs-config.json');
