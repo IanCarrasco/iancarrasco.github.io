@@ -8,7 +8,7 @@ $(".nav-button").click(function(e){
 });
 $("#close-expand").click(function(){
 	$("#name-container").toggleClass("full");
-	$("#name").delay(500).html("ian carrasco");
+	$("#name").delay(500).html("ian<br>carrasco");
 	$("#close-expand").css({"visibility":"hidden","opacity":"0"})
 	$("#nav-holder").fadeIn(500)
 });
