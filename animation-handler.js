@@ -4,6 +4,7 @@ $(".nav-button").click(function(e){
 	$("#name-container").toggleClass("full");
 	$("#name").html((e.target.innerText));
 	document.getElementById('content-frame').src = e.target.innerText +'.html'
+	document.title = "Ian Carrasco | " + e.target.innerText;
 	$(".content-box").css({"opacity" : "1"}).delay(1000).show(1);
 	$("#close-expand").css({"visibility":"visible","opacity":"1"})
 	$("#nav-holder").fadeOut(500).delay(1000);
