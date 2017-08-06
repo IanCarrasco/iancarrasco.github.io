@@ -19,4 +19,3 @@ $("#close-expand").click(function(){
 });
 
 //PARTICLE BACKGROUND
-particlesJS.load('particle-container', './assets/particlesjs-config.json');
