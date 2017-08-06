@@ -51,8 +51,9 @@ body{
 	background: rgba(0,0,0,0);
 	color:#fff !important;
 	border: 0px;
-	right:0px;
+	right:(50vw - 40%);
 	z-index: 9;
+	justify-content: center;
 }
 .full{
 	width:calc(100vw) !important;
