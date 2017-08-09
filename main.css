@@ -120,7 +120,7 @@ body{
 	align-items: center;
 	justify-content: center;
 	font-weight: bold;
-	border-width: 1px;#FD2E58
+	border-width: 1px;
 	border-style:none;
 	transition: .2s;
 	z-index: 0;
@@ -132,7 +132,7 @@ body{
 	font-size: 2.5rem !important;
 
 }
-.nav-button[name='work']:hover{
+.nav-button[name='Work']:hover{
 	color:#FD2E58;
 	border-bottom-style: solid;
 	border-color: #FD2E58;

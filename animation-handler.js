@@ -9,7 +9,7 @@ window.onload = () =>{
 var ExpandNav = (name) =>{
 	$("#nav-holder").fadeOut(500).delay(1000);
 	$("#name-container").addClass("full");
-	$("#name").html((name));
+	$("#name").html((name.toLowerCase()));
 	document.getElementById('content-frame').src = name +'.html'
 	document.title = "Ian Carrasco | " + name;
 	$(".content-box").css({"opacity" : "1"}).delay(1000).show(1);
@@ -18,8 +18,9 @@ var ExpandNav = (name) =>{
 	$("#content-frame").css({zIndex:99})
 	$("#content-frame").delay(500).fadeIn(100)
 }
-var CollapseNav = () =>{
+var CollapseNav = (name) =>{
 	$("#name-container").removeClass("full");
+	document.title = "Ian Carrasco | " + name;
 	$("#name").delay(500).html("ian<br>carrasco");
 	$("#close-expand").css({"visibility":"hidden","opacity":"0"})
 	$("#nav-holder").fadeIn(500)
@@ -28,19 +29,19 @@ var CollapseNav = () =>{
 
 
 routie('projects', function() {
-	ExpandNav('projects')
+	ExpandNav('Projects')
 });
 routie('work', function() {
-	ExpandNav('work')
+	ExpandNav('Work')
 });
 routie('resume', function() {
-	ExpandNav('resume')
+	ExpandNav('Resume')
 });
 routie('contact', function() {
-	ExpandNav('contact')
+	ExpandNav('Contact')
 });
 routie('home', function() {
-	CollapseNav()
+	CollapseNav('Home')
 });
 
 //PARTICLE BACKGROUND
