@@ -1,7 +1,7 @@
 
 $("#content-frame").hide()
 window.onload = () =>{
-	if(window.location == 'http://iancarras.co'){
+	if(window.location.href == 'http://iancarras.co/'){
 		routie('home')
 	}
 }
