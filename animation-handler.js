@@ -1,13 +1,6 @@
 
 $("#content-frame").hide()
-window.onload = () =>{
-	if(history.pushState) {
-    	history.pushState(null, null, '#home');
-	}
-	else {
-		location.hash = '#home';
-	}
-}
+
 
 var ExpandNav = (name) =>{
 	$("#nav-holder").fadeOut(500).delay(1000);
