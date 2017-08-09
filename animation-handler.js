@@ -1,6 +1,10 @@
 
 $("#content-frame").hide()
-
+window.onload = () =>{
+	if(window.location == 'http://iancarras.co'){
+		routie('home')
+	}
+}
 
 var ExpandNav = (name) =>{
 	$("#nav-holder").fadeOut(500).delay(1000);
