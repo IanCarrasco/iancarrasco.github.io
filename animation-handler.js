@@ -10,7 +10,7 @@ var ExpandNav = (name) =>{
 	$("#nav-holder").fadeOut(500).delay(1000);
 	$("#name-container").addClass("full");
 	$("#name").html((name.toLowerCase()));
-	document.getElementById('content-frame').src = name +'.html'
+	document.getElementById('content-frame').src = name.toLowerCase() +'.html'
 	document.title = "Ian Carrasco | " + name;
 	$(".content-box").css({"opacity" : "1"}).delay(1000).show(1);
 	$("#close-expand").css({"visibility":"visible","opacity":"1"})
