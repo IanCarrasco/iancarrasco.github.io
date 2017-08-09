@@ -3,6 +3,7 @@
 <head>
 	<title>Ian Carrasco</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="./routie.min.js"></script>
 	<link rel="stylesheet" href = "https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css">
 	<link rel="stylesheet" href="./main.css">
 
@@ -10,21 +11,21 @@
 <body>
 	<iframe src="" id="content-frame"></iframe>
 	<div id="name-container">
-		<span class="glyphicon glyphicon-remove-circle" id="close-expand"></span>
+		<a href="#home"><span class="glyphicon glyphicon-remove-circle" id="close-expand"></span><a>
 		<h1 id="name">ian<br>carrasco</br></h1>
 	</div>
 	<div id="nav-holder">
 		<div name="work" class="nav-button">
-			<span>work</span>
+			<a href="#work"><span>work</span></a>
 		</div>
 		<div name="resume" class="nav-button">
-			<span>resume</span>
+			<a href="#resume"><span>resume</span></a>
 		</div>
 		<div name="projects" class="nav-button">
-			<span>projects</span>
+			<a href="#projects"><span>projects</span></a>
 		</div>
 		<div name="contact" class="nav-button">
-			<span>contact</span>
+			<a href="#contact"><span>contact</span></a>
 		</div>
 	</div>
 	<script src="animation-handler.js"></script>
