@@ -161,3 +161,42 @@ body{
 	height: 100vh;
 	overflow: hidden;
 }
+.content-list-element{
+	width:100%;
+	height:150px;
+	border-bottom: 2px solid #EFA93A;
+	display: flex;
+	justify-content: center;
+	z-index: 2;
+	vertical-align: middle;
+}
+.content-list{
+	width: 100%;
+}
+.element-title{
+	z-index: 10;
+	opacity:1 !important;
+	align-self: center;
+}
+
+#time-dot{
+		background-image:url('./assets/timedot.jpg') !important;
+		background-size:cover;
+		background-position: 0% 0%;
+
+
+}
+.darken{
+	width:100%;
+	height:150px;
+	display: flex;
+	background: rgba(0,0,0,0.7);
+	justify-content:center;
+	align-items: center;
+	transition:.3s;
+	cursor: pointer;
+}
+.darken:hover{
+	background: rgba(0,0,0,0.6);
+
+}
