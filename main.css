@@ -186,8 +186,16 @@ body{
 		background-image:url('./assets/timedot.jpg') !important;
 		background-size:cover;
 		background-position: 0% 0%;
-
-
+}
+#half-step{
+	background-image:url('./assets/half-step.png') !important;
+	background-size:cover;
+	background-position: 0% 0%;
+}
+#apod{
+	background-image:url('./assets/apod.png') !important;
+	background-size:cover;
+	background-position: 0% 0%;
 }
 .darken{
 	width:100%;
@@ -200,6 +208,6 @@ body{
 	cursor: pointer;
 }
 .darken:hover{
-	background: rgba(0,0,0,0.6);
+	background: rgba(0,0,0,0.4);
 
 }
