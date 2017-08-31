@@ -13,6 +13,9 @@ a:hover{
 a:visited{
 	color:inherit;
 	text-decoration: none;
+} 
+a h1:visited{
+	text-decoration: none;
 }
 body{
 	font-family: 'Helvetica';
