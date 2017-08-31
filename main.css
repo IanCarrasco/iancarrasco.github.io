@@ -181,7 +181,9 @@ body{
 	opacity:1 !important;
 	align-self: center;
 }
-
+#content-frame .c14{
+	background-color: rgba(0,0,0,0)
+}
 #time-dot{
 		background-image:url('./assets/timedot.jpg') !important;
 		background-size:cover;
