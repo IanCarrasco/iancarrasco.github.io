@@ -13,6 +13,7 @@ html{
 }
 hr{
 	margin: 2px;
+	width: 50%;
 	border-bottom: 1vh solid;
   border-image: linear-gradient(to right, rgb(72, 255, 221) 25% , rgb(79, 173, 255) 25%, rgb(79, 173, 255) 50%, rgb(255, 180, 68) 50%,rgb(255, 180, 68) 75%, rgb(254, 87, 75) 75% , rgb(254, 87, 75) 75%) 5;
 }
