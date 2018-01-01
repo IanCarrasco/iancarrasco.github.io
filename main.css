@@ -3,13 +3,13 @@
 	font-family: 'Helvetica';
 }
 html,body{
-	padding: 10px;
+	padding: 20px;
 	background-color: #1d1d1d;
 	color:#fff;
 }
 html{
-	border-bottom: 5px solid;
-  border-image: linear-gradient(to right, rgb(72, 255, 221) 25% , rgb(79, 173, 255) 25%, rgb(79, 173, 255) 50%, rgb(255, 180, 68) 50%,rgb(255, 180, 68) 75%, rgb(254, 87, 75) 75% , rgb(254, 87, 75) 75%) 5;
+	border-bottom: 4px solid;
+  border-image: linear-gradient(to right, rgb(72, 255, 221) 25% , rgb(79, 173, 255) 25%, rgb(79, 173, 255) 50%, rgb(255, 180, 68) 50%,rgb(255, 180, 68) 75%, rgb(254, 87, 75) 75% , rgb(254, 87, 75) 75%) 4;
 	height: 100vh;
 	transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
@@ -43,11 +43,15 @@ ul{
 	width:4rem;
 }
 .fa-facebook {
-	background: #3B5998;
+	background: rgb(87, 102, 133);
 	color: white;
 	width:4rem;
 }
-
+.fa-envelope{
+	background: rgb(71, 84, 114);
+	color: white;
+	width:4rem;
+}
 
 .thin{
 	font-weight: 200 !important;
@@ -57,6 +61,7 @@ ul{
 .section-header{
 	font-size: 3rem;
 	margin: 0px;
+	padding: 3px;
 }
 .section-header:nth-child(1){
 	color:rgb(72, 255, 221);
