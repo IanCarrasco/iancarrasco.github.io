@@ -13,10 +13,19 @@ html{
 	transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 	overflow: hidden;
 }
+::selection{
+	background: rgb(218, 121, 114);
+	color:#fff;
+}
+::-moz-selection{
+	background: rgb(218, 121, 114);
+	color:#fff;
+
+}
 body{
 	height: 99vh;
 	width: 100vw;
-	padding: 20px;
+	padding: 30px;
 	overflow-y: scroll;
 }
 a{
@@ -24,6 +33,7 @@ a{
 	color:#fff !important;
 	outline: 0 !important;
 	padding: 2px;
+	width:auto;
 }
 a:active {
 	outline: none !important;
