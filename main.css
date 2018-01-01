@@ -11,7 +11,44 @@ html{
 	border-bottom: 5px solid;
   border-image: linear-gradient(to right, rgb(72, 255, 221) 25% , rgb(79, 173, 255) 25%, rgb(79, 173, 255) 50%, rgb(255, 180, 68) 50%,rgb(255, 180, 68) 75%, rgb(254, 87, 75) 75% , rgb(254, 87, 75) 75%) 5;
 	height: 100vh;
+	transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
+a{
+	text-decoration: none !important;
+	color:#fff !important;
+}
+ul{
+	padding:0px;
+}
+.fa{
+	text-decoration: none !important;
+	font-size: 2rem;
+	padding: 1rem;
+	margin:0.5rem;
+	margin-left:0rem;
+	text-align: center;
+	border-radius: 50%;
+}
+.fa:hover{
+	transform: translate(0,-0.2rem);
+	color:#fff !important;
+}
+.fa-twitter {
+  background: #55ACEE;
+	color: white;
+}
+.fa-linkedin{
+	background: #007bb5;
+	color:#fff;
+	width:4rem;
+}
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+	width:4rem;
+}
+
+
 .thin{
 	font-weight: 200 !important;
 	margin: 0px;
@@ -37,6 +74,12 @@ html{
 	color:rgb(64, 184, 235);	
 	border-color:rgb(64, 184, 235)
 
+}
+.indev{
+	color:rgb(254, 87, 75);
+}
+.underline{
+	text-decoration: underline;
 }
 #site-title{
 	font-size: 6rem;
