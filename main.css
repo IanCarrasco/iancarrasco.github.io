@@ -18,6 +18,7 @@ a{
 	text-decoration: none !important;
 	color:#fff !important;
 	outline: 0 !important;
+	padding: 2px;
 }
 a:active {
 	outline: none !important;
@@ -70,23 +71,46 @@ ul{
 
 }
 .section-header{
-	font-size: 3rem;
+	font-size: 4rem;
 	margin: 0px;
+	padding: 5px;
 }
 .section-header:nth-child(1){
 	color:rgb(72, 255, 221);
+  -webkit-animation-delay: 0.2s;
 }
 .section-header:nth-child(3){
 	color:rgb(79, 173, 255);
+	-webkit-animation-delay: 0.4s;
+
 }
 .section-header:nth-child(5){
-	color:rgb(255, 180, 68)
+	color:rgb(255, 180, 68);
+	-webkit-animation-delay: 0.6s;
+
 }
 .section-header:nth-child(7){
-	color:rgb(254, 87, 75)
+	color:rgb(254, 87, 75);
+	-webkit-animation-delay: 0.8s;
 }
+.fa:nth-child(1){
+	-webkit-animation-delay: 1.2s;
+}
+.fa:nth-child(2){
+	-webkit-animation-delay: 1.4s;
+}
+.fa:nth-child(3){
+	-webkit-animation-delay: 1.6s;
+}
+.fa:nth-child(4){
+	-webkit-animation-delay: 1.8s;
+}
+.fa:nth-child(5){
+	-webkit-animation-delay: 2s;
+}
+
 .accent{
-	color:rgb(64, 184, 235);	
+	color:rgb(85, 255, 238);	
 	border-color:rgb(64, 184, 235)
 
 }
@@ -98,9 +122,19 @@ ul{
 }
 #site-title{
 	font-size: 6rem;
+	-webkit-animation-delay: 0.1s;
 }
 #subtitle{
 	font-size: 3rem;
+}
+.year{
+	color:rgb(98, 187, 235);
+}
+.desc{
+	color:rgb(182, 182, 182);
+}
+.award{
+	color:rgb(255, 180, 68);
 }
 
 
