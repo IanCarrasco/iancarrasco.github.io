@@ -9,7 +9,7 @@ $(document).ready(()=>{
     $('#site-title').removeClass('animated');
     $('.fa').removeClass('fadeInUp animated');
 
-  }, 3000)
+  }, 3500)
 
 })
 
