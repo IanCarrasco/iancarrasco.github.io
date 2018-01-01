@@ -8,7 +8,7 @@ html,body{
 	color:#fff;
 }
 html{
-	border: #1d1d1d
+	border: #1d1d1d;
 	border-bottom: 1vh solid;
   border-image: linear-gradient(to right, rgb(72, 255, 221) 25% , rgb(79, 173, 255) 25%, rgb(79, 173, 255) 50%, rgb(255, 180, 68) 50%,rgb(255, 180, 68) 75%, rgb(254, 87, 75) 75% , rgb(254, 87, 75) 75%) 5;
 	transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
