@@ -10,7 +10,7 @@ html,body{
 @media (max-width: 1045px) {
 
 	hr{
-		width:100%;
+		width:100% !important;
 	
 	}
 
