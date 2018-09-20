@@ -16,12 +16,6 @@ window.onload = function() {
     block:'start'
   });
 
-  $('.grid').masonry({
-    // options
-    itemSelector: '.grid-item',
-    columnWidth: 200
-  });
-
 }
 
 window.onhashchange = function() { 
