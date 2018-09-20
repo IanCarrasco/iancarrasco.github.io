@@ -1,179 +1,94 @@
 @font-face{
-	src:url('./fonts/NeueHaasGrotDisp-65Medium-Web.woff2');
+	src:url('./fonts/HelveticaNeue.ttf');
 	font-family: 'Helvetica';
 	font-smooth: always;
 }
+@font-face{
+	src:url('./fonts/noe-display-bold.ttf');
+	font-family: 'Noe';
+	font-smooth: always;
+}
+@font-face{
+	src:url('./fonts/Platform-Medium-Web.ttf');
+	font-family: 'Platform';
+	font-smooth: always;
+}
+@font-face{
+	src:url('./fonts/SF-Pro-Display-Medium.otf');
+	font-family: 'SFMedium';
+	font-smooth: always;
+}
 html,body{
-	background-color: #1d1d1d;
-	color:#fff;
-}
-@media (max-width: 1045px) {
+		background-color: #1d1d1d;
 
-	hr{
-		width:100% !important;
-	
-	}
+		background-image: -webkit-repeating-radial-gradient(center center,#444,#666 1px, transparent 1px, transparent 100%);
 
-}
-html{
-	transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-	overflow: hidden;
-}
-hr{
-	margin: 10px;
-	margin-left: 0px;
-	width: 70%;
-	border-bottom: 1vh solid;
-  border-image: linear-gradient(to right, rgb(72, 255, 221) 25% , rgb(79, 173, 255) 25%, rgb(79, 173, 255) 50%, rgb(255, 180, 68) 50%,rgb(255, 180, 68) 75%, rgb(254, 87, 75) 75% , rgb(254, 87, 75) 75%) 5;
-}
-::selection{
-	background: rgb(218, 121, 114);
-	color:#fff;
-}
-::-moz-selection{
-	background: rgb(218, 121, 114);
-	color:#fff;
-
+		background-size: 60px 60px;
 }
 body{
-	height: 99vh;
-	width: 100vw;
-	padding: 30px;
-	overflow-y: scroll;
-}
-a{
-	text-decoration: none !important;
-	color:#fff !important;
-	outline: 0 !important;
-	padding: 2px;
-	width:auto;
-	transition: .2s;
-}
-a:active {
-	outline: none !important;
-}
-a:hover{
-	color:rgb(68, 183, 255) !important;
+	padding:30px;
+	color:#fff;
 
 }
-ul{
+
+.name-container h2{
+
 	padding:0px;
-}
-.fa{
-	text-decoration: none !important;
+	margin: 0px;
+	font-family: "Helvetica";
+	letter-spacing: 0.1ch;
 	font-size: 2rem;
-	padding: 1rem;
-	margin:0.5rem;
-	margin-left:0rem;
+	color:#fff;
+	vertical-align: middle;
+
+}
+.name-container{
+
+	width:120px;
+	height: 120px;
+	border: 3px solid;
+	border-top-color:#FD2E58;
+	border-left-color:#EFA93A;
+	border-bottom-color:#5FD0D4;
+	border-right-color: #2ecc71;
+	padding: 10px;
+	padding-top:30px;
+	background-color: #1d1d1d;
+
+}
+.info-section{
+
+	width: 100vw;
+	height: 90vh;
+	display: flex;
+
+}
+.content-body{
+	overflow-y: hidden;
+	overflow-x: hidden
+	width: 100vw;
+	height: auto;
+	position: fixed;
+	top:170px;
+	height: calc(100vh - 170px);
+}
+
+.section-title{
+	font-size: 12rem;
+	display: inline-block;
+	writing-mode:vertical-rl;
 	text-align: center;
-	border-radius: 50%;
-
-}
-.fa:hover{
-	transform: translate(0,-0.2rem);
-	color:#fff !important;
-}
-.fa-twitter {
-  background: #55ACEE;
-	color: white;
-}
-.fa-linkedin{
-	background: #007bb5;
-	color:#fff;
-	width:4rem;
-}
-.fa-github{
-	background: #777;
-	color:#fff;
-	width:4rem;
-}
-.fa-envelope{
-	background: #555;
-	color:#fff;
-	width:4rem;
-}
-.fa-facebook {
-	background: #3B5998;
-	color: white;
-	width:4rem;
-}
+	line-height: 12rem;
 
 
-.thin{
-	font-weight: 200 !important;
-	margin: 0px;
-
 }
-.section-header{
-	font-size: 4rem;
-	margin: 0px;
-	padding: 5px;
-
-}
-.section-header:nth-child(1){
-	color:rgb(72, 255, 221);
-  -webkit-animation-delay: 0.2s;
-}
-.section-header:nth-child(3){
-	color:rgb(79, 173, 255);
-	-webkit-animation-delay: 0.4s;
-
-}
-.section-header:nth-child(5){
-	color:rgb(255, 180, 68);
-	-webkit-animation-delay: 0.6s;
-
-}
-.section-header:nth-child(7){
-	color:rgb(254, 87, 75);
-	-webkit-animation-delay: 0.8s;
-}
-.fa:nth-child(1){
-	-webkit-animation-delay: 1.2s;
-}
-.fa:nth-child(2){
-	-webkit-animation-delay: 1.4s;
-}
-.fa:nth-child(3){
-	-webkit-animation-delay: 1.6s;
-}
-.fa:nth-child(4){
-	-webkit-animation-delay: 1.8s;
-}
-.fa:nth-child(5){
-	-webkit-animation-delay: 2s;
+.section-content{
+	width:80vw;
+	position: relative;
+	height: 90vh;
+	padding:35px;
+	padding-left: 15rem;
+	font-family: "Helvetica";
 }
 
-.accent{
-	color:rgb(85, 255, 238);	
-	border-color:rgb(64, 184, 235)
-
-}
-.indev{
-	color:rgb(254, 87, 75);
-}
-.underline{
-	text-decoration: underline;
-}
-#site-title{
-	font-size: 6rem;
-	-webkit-animation-delay: 0.1s;
-}
-#subtitle{
-	font-size: 3rem;
-}
-.year{
-	color:rgb(98, 187, 235);
-}
-.desc{
-	color:rgb(182, 182, 182);
-}
-.award{
-	color:rgb(255, 180, 68);
-}
-.click:hover{
-	color:rgb(255, 180, 68);
-
-}
-
-
+.grid-item { width: 200px;height: 200px; background-color: red;}
