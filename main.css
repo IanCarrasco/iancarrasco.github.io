@@ -18,6 +18,11 @@
 	font-family: 'SFMedium';
 	font-smooth: always;
 }
+@font-face{
+	src:url('./fonts/SF-Pro-Display-Thin.otf');
+	font-family: 'SFLight';
+	font-smooth: always;
+}
 html,body{
 		background-color: #1d1d1d;
 
@@ -31,6 +36,23 @@ body{
 
 }
 
+.section-content h1{
+	font-size:3.5rem;
+	font-family: 'SFMedium';
+	margin-bottom: 2px;
+}
+.section-content h2{
+	font-family: "SFLight";
+	font-size: 2.5rem;
+
+}
+.header-thumb{
+	border-radius: 50%;
+	width:150px;
+	height: 150px;
+	box-shadow: inset 1px 1px 10px rgba(0,0,0,0.8);
+
+}
 .name-container h2{
 
 	padding:0px;
@@ -41,6 +63,43 @@ body{
 	color:#fff;
 	vertical-align: middle;
 
+}
+.nav-buttons{
+	position: absolute;
+	display: flex;
+	right: 5%;
+}
+.nav-buttons a{
+
+	color:#fff;
+	padding:10px;
+	font-size: 2.5rem;
+	transition: 0.2s;
+	text-decoration: none;
+
+}
+.nav-buttons a:nth-child(1):hover{
+
+	color:#FD2E58;
+
+}
+.nav-buttons a:nth-child(2):hover{
+
+	color:#2ecc71;
+
+}
+.nav-buttons a:nth-child(3):hover{
+
+	color:#5FD0D4;
+
+}
+.nav-buttons a:nth-child(4):hover{
+
+	color:#EFA93A;
+
+}
+.green{
+	color:#2ecc71;
 }
 .name-container{
 
@@ -88,8 +147,10 @@ body{
 	position: relative;
 	height: 90vh;
 	padding:35px;
-	padding-left: 15rem;
+	padding-left: 10rem;
 	font-family: "Helvetica";
+	display: flex;
+	flex-direction: column;
 }
 
 .grid-item { width: 200px;height: 200px; background-color: red;}

@@ -1,8 +1,5 @@
 const pages = ["#about", "#projects", "#work", "#contact"]
 
-
-
-
 window.onload = function() { 
   
   let selector = `div[href="${window.location.hash}"]`
