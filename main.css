@@ -161,7 +161,6 @@ body{
 	font-family: "Helvetica";
 	display: flex;
 	flex-direction: column;
-	overflow-y: scroll;
 }
 .work h1{
 	margin:1px;
