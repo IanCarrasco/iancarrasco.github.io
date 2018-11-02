@@ -81,22 +81,22 @@ body{
 }
 .nav-buttons a:nth-child(1):hover{
 
-	color:#FD2E58;
+	color:#5FD0D4;
 
 }
 .nav-buttons a:nth-child(2):hover{
 
-	color:#2ecc71;
+	color:#EFA93A;
 
 }
 .nav-buttons a:nth-child(3):hover{
 
-	color:#5FD0D4;
+	color:#FD2E58;
 
 }
 .nav-buttons a:nth-child(4):hover{
 
-	color:#EFA93A;
+	color:#2ecc71;
 
 }
 .green{
