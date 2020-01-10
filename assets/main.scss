@@ -1,0 +1,70 @@
+---
+---
+
+@import "{{ site.theme }}";
+@import "syntax-highlighting";
+
+@font-face{
+
+    font-family: "Inter";
+    src:url('./fonts/Inter (OTF)/Inter-Light-BETA.otf');
+  
+  }
+  @font-face{
+  
+    font-family: "Colfax";
+    src:url('./fonts/colai/ColfaxAI-Regular.woff2');
+  
+  }
+  @font-face{
+  
+    font-family: "ColfaxMedium";
+    src:url('./fonts/colai/ColfaxAI-Medium.woff2');
+  
+  }
+  @font-face{
+  
+    font-family: "ColfaxCaption";
+    src:url('./fonts/colai/ColfaxAI-Caption.woff2');
+  
+  }
+  h1{
+    font-family: "ColfaxMedium";
+  }
+  h2, h3, h4, h5, h6 {
+    font-family: "Colfax"
+  }
+  a:visited{
+    color:#111;
+  }
+  a:hover{
+    text-decoration:none;
+    color:#29dd74;
+    transition:0.2s;
+  
+  }
+  .site-header{
+    position:sticky;
+    top:0px;
+    background-color: #fff;
+  }
+  .site-title{
+   font-family: "ColfaxCaption";
+  }
+  blockquote{
+    font-family: "ColfaxCaption";
+  }
+  .post-title{
+    font-family: "ColfaxMedium";
+  }
+  .post-content{
+    font-family: "Colfax";
+  }
+  .post-content h2{
+    font-family: "ColfaxMedium";
+  }
+  .site-header{
+  
+    box-shadow: 0 7px 14px 0 rgba(50,50,93,.1), 0 3px 6px 0 rgba(0,0,0,.07);
+    border: 0px;
+  }
