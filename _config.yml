@@ -22,8 +22,8 @@ title: Ian Carrasco
 email: iansee.c@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A blog about CS + Neuro, Music, and Design
-baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://iancarras.co" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/"
 twitter_username: ia_n_ai
 github_username:  IanCarrasco
 
