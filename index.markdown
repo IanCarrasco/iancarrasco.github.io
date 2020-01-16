@@ -6,7 +6,7 @@ layout: page
 custom_css: homepage
 ---
 
-![](https://lh3.google.com/u/0/d/1iEiZPHu-4PBRDRcbBDs0lijAHyke7J8K=w1920-h897-iv1){: height="130" width="130"}
+![](/assets/circleimage.png){: height="130" width="130"}
 <br/><br/>
 
 # Hi, I'm Ian.
