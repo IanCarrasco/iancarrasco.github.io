@@ -68,7 +68,7 @@
     font-family: "ColfaxMedium";
   }
   .wrapper{
-    width: 600px;
+    width: 60vw;
   }
   .post-content{
     font-family: "Colfax";
@@ -89,4 +89,9 @@
     text-align: center;
     font-size: .8rem;
     color: light-grey;
+  }
+  p{
+    width: 100% !important;
+  }
+  .page-content{
   }

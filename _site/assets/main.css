@@ -436,7 +436,7 @@ blockquote { font-family: "ColfaxCaption"; }
 
 .post-title { font-family: "ColfaxMedium"; }
 
-.wrapper { width: 600px; }
+.wrapper { width: 60vw; }
 
 .post-content { font-family: "Colfax"; color: #fff; }
 
@@ -447,5 +447,7 @@ blockquote { font-family: "ColfaxCaption"; }
 .site-footer { border-image: linear-gradient(to left, #ab58c4 10%, orange 50%, #ff5c5c 85%) 3; }
 
 .image-caption { text-align: center; font-size: .8rem; color: light-grey; }
+
+p { width: 100% !important; }
 
 /*# sourceMappingURL=main.css.map */
