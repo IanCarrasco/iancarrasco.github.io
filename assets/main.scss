@@ -76,6 +76,10 @@
   }
   .post-content h2{
     font-family: "ColfaxMedium";
+    font-size: 1.6rem;
+  }
+  .post-content p{
+    font-size: 1.1rem;
   }
   .site-header{
   
@@ -87,7 +91,7 @@
   }
   .image-caption {
     text-align: center;
-    font-size: .8rem;
+    font-size: .8rem !important;
     color: light-grey;
   }
   p{
@@ -99,5 +103,8 @@
     .site-nav{
       background-color:#222 !important;
       border:0px !important;
+    }
+    .wrapper{
+      width:90vw !important;
     }
   }

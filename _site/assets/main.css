@@ -440,16 +440,18 @@ blockquote { font-family: "ColfaxCaption"; }
 
 .post-content { font-family: "Colfax"; color: #fff; }
 
-.post-content h2 { font-family: "ColfaxMedium"; }
+.post-content h2 { font-family: "ColfaxMedium"; font-size: 1.6rem; }
+
+.post-content p { font-size: 1.1rem; }
 
 .site-header { border: 0px; color: #ffffff; }
 
 .site-footer { border-image: linear-gradient(to left, #ab58c4 10%, orange 50%, #ff5c5c 85%) 3; }
 
-.image-caption { text-align: center; font-size: .8rem; color: light-grey; }
+.image-caption { text-align: center; font-size: .8rem !important; color: light-grey; }
 
 p { width: 100% !important; }
 
-@media screen and (max-width: 600px) { .site-nav { background-color: #222 !important; border: 0px !important; } }
+@media screen and (max-width: 600px) { .site-nav { background-color: #222 !important; border: 0px !important; } .wrapper { width: 90vw !important; } }
 
 /*# sourceMappingURL=main.css.map */
