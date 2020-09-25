@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://iancarras.co/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iancarras.co/" rel="alternate" type="text/html" /><updated>2020-09-24T19:16:54-07:00</updated><id>http://iancarras.co/feed.xml</id><title type="html">Ian Carrasco</title><subtitle>A blog, resume, and archive of things I'm interested in and have worked on.</subtitle><entry><title type="html">Introducing the NeuroAI Series</title><link href="http://iancarras.co/2020/01/15/intronai.html" rel="alternate" type="text/html" title="Introducing the NeuroAI Series" /><published>2020-01-15T10:05:52-08:00</published><updated>2020-01-15T10:05:52-08:00</updated><id>http://iancarras.co/2020/01/15/intronai</id><content type="html" xml:base="http://iancarras.co/2020/01/15/intronai.html">&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/2/20/Rat_hippocampus_stained_with_antibody_to_NeuN_%28green%29%2C_myelin_basic_protein_%28red%29_and_DNA_%28blue%29.jpg&quot; alt=&quot;&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://iancarras.co/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iancarras.co/" rel="alternate" type="text/html" /><updated>2020-09-24T19:25:10-07:00</updated><id>http://iancarras.co/feed.xml</id><title type="html">Ian Carrasco</title><subtitle>A blog, resume, and archive of things I'm interested in and have worked on.</subtitle><entry><title type="html">Introducing the NeuroAI Series</title><link href="http://iancarras.co/2020/01/15/intronai.html" rel="alternate" type="text/html" title="Introducing the NeuroAI Series" /><published>2020-01-15T10:05:52-08:00</published><updated>2020-01-15T10:05:52-08:00</updated><id>http://iancarras.co/2020/01/15/intronai</id><content type="html" xml:base="http://iancarras.co/2020/01/15/intronai.html">&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/2/20/Rat_hippocampus_stained_with_antibody_to_NeuN_%28green%29%2C_myelin_basic_protein_%28red%29_and_DNA_%28blue%29.jpg&quot; alt=&quot;&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
 &lt;p class=&quot;image-caption&quot;&gt;NeuN Stain of a Rat Hippocampus&lt;/p&gt;
 &lt;h3 id=&quot;motivation&quot;&gt;Motivation&lt;/h3&gt;
@@ -17,73 +17,7 @@ is still in its infancy. A more common approach that is to ask if existing mecha
 “neurons that fire together wire together”. We will first look at the principle from a neuroscience lens, then move into its
 computational formulation by looking at a paper by Miconi, Clune, et al. (Uber AI), &lt;em&gt;Differentiable plasticity: training plastic neural networks with backpropagation&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Stay Tuned.&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Hebbian Learning | NeuroAI #1</title><link href="http://iancarras.co/2020/01/15/hebbian.html" rel="alternate" type="text/html" title="Hebbian Learning | NeuroAI #1" /><published>2020-01-15T10:05:52-08:00</published><updated>2020-01-15T10:05:52-08:00</updated><id>http://iancarras.co/2020/01/15/hebbian</id><content type="html" xml:base="http://iancarras.co/2020/01/15/hebbian.html">&lt;p&gt;&lt;img src=&quot;/assets/pyramidal.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p class=&quot;image-caption&quot;&gt;Illustration of a pyramidal neuron in the cerebral cortex by Ramon y Cajal. &lt;br /&gt;&lt;em&gt;Courtesy of the Cajal Institute&lt;/em&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;introduction-and-considerations&quot;&gt;Introduction and Considerations&lt;/h1&gt;
-
-&lt;p&gt;Understanding how learning occurs in the brain is a key question in neuroscience, alongside those of memory and visual processing. This is a particularly difficult problem, as with many other inquires about the brain, since it can be analyzed at many different scales (molecules, individual neurons, circuits, behavior) which can converge to varying hypotheses about the same process.&lt;/p&gt;
-
-&lt;p&gt;Given the emergent nature of brain structure, there seems to be a tight coupling between the aforementioned scales. As an example, if we want to go about modeling the dynamics of a neural circuit,when observing the circuit’s behavior it would be naïve to not consider the impact of assumptions being made at smaller scales such as the working model for a single neuron.&lt;/p&gt;
-
-&lt;p&gt;There tend to be two common approaches (not exclusive) when modelling brain function and higher level behavior in a computational setting. The first is to analyze the structure and dynamics of a neural system and building a computational model consistent with that structure. The second is to build a model which can perform a high-level task fairly well, and look for parallels at the computational and representational level after the fact. I like to call the first approach a bottom up/emergent view and the second approach a top-down/distillation view.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Bottom-Up/Emergent (Structure -&amp;gt; Behavior)&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Attempt to model specific aspects of brain structure (connectivity patterns, cell types, etc.)&lt;/li&gt;
-  &lt;li&gt;Train on a given task and observe model’s behavior w.r.t human behavior&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Top-Down/Distillation (Behavior -&amp;gt; Structure)&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Identify a complex task humans are commonly able to solve&lt;/li&gt;
-  &lt;li&gt;Build a model using existing deep learning approaches to try and solve said task&lt;/li&gt;
-  &lt;li&gt;Observe model’s behavior with respect to human behavior, and draw parallels between ANN and brain structure using interpretability techiques and adversarial examples.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;An common approach to trying to build systems which performa is to use existing machine learning opposed to identifying what processes occur in the brain (i.e. object detection, planning) and attempting to emulate high-level behavior. For example, we see this displayed in works looking at parallels between CNNs and visio-cortical processing. Where instead of trying modeling the visual cortex by trying to model cortical neurons and connectivity patterns directly, we use our standard deep CNN architectures and observe if there are computational properties that arise similar to the visual cortex, such as edge detection and higher level processing as a function of layer depth. &lt;a href=&quot;https://arxiv.org/pdf/2001.07092.pdf&quot;&gt;https://arxiv.org/pdf/2001.07092.pdf&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;With this thought aside, we’ll first look at a computational account of learning and synaptic plasticity in the brain known as Hebbian Learning (HL). Then, we’ll draw connections to some classical and modern machine learning architectures inspired by HL including Hopfield Nets, Competing Hidden Units, and Differentiable Plasticity.&lt;/p&gt;
-
-&lt;p&gt;Throughout, the aim is to see how intuition about biological learning processes can be adapted into frameworks that are amenable for computation.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;Hebbian%20Learning%20(Associative%20Learning)%20710be6c12ee34e7f97a1075bd7bbe425/Screen_Shot_2020-09-02_at_3.25.12_AM.png&quot; alt=&quot;Hebbian%20Learning%20(Associative%20Learning)%20710be6c12ee34e7f97a1075bd7bbe425/Screen_Shot_2020-09-02_at_3.25.12_AM.png&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;TODO: Add neuron diagram&lt;/p&gt;
-
-&lt;h1 id=&quot;what-is-hebbian-learning&quot;&gt;What is Hebbian Learning?&lt;/h1&gt;
-&lt;p&gt;At it’s core, hebbian learning states that if two neurons i (pre-synaptic) and j (post-synaptic) connected by a synapse, s,  the synaptic strength can be seen as a product of the pre- and post- synaptic activity, typically within the range of a small time window.&lt;/p&gt;
-
-&lt;p&gt;From a causal perspective, timing is an important factor as neuron i has to fire just before neuron j to make a potential claim that i has a role in j’s firing, a case which under Hebb’s model would lead to a synapse strengthening. On the other hand, if the activity of j tends to be uncorrelated to that of i (i.e. j firing before i) then we’d tend to see a weakening of the synapse. The timing of neural activity contributing to both strengthing &lt;strong&gt;and weakening&lt;/strong&gt; is captured by a generalization of Hebb’s rule known as Spike Time Dependent Plasticity (STDP), and is a widely accepted explanation for long-term potentiation and depression of neuron populations.&lt;/p&gt;
-
-&lt;h1 id=&quot;formalization-of-a-hebbian-learning-rule&quot;&gt;Formalization of a Hebbian Learning Rule&lt;/h1&gt;
-
-\[\Delta w_{ij} = \alpha \cdot x_i \cdot x_j\]
-
-&lt;p&gt;The Hebbian learning account provides an intuitive, experimentally backed framework for describing how synaptic weights change through time-correlated activity between neurons.&lt;/p&gt;
-
-&lt;p&gt;Synapse strengthened (weight adjustment) when post-synaptic response occurs in conjunction with pre-synaptic firing. Pre-synaptic neuron has to fire “just before” post-synaptic neuron so causality can be inferred.&lt;/p&gt;
-
-&lt;p&gt;Hebbian learning is an account of weight adjustment between neurons&lt;/p&gt;
-
-&lt;p&gt;Hebb supports a real-time learning mechanism, where the temporal association of signals is important to the efficacy of a synapse and corresponding learning mechanisms which adjust it&lt;/p&gt;
-
-&lt;p&gt;Non real-time learning error signals computed from system responses/order of inputs and outputs, but not the exact time of occurence of each input/output&lt;/p&gt;
-
-&lt;p&gt;Hebbian LTP is seen in conjunction with Hetero-synaptic long term depression, where the receiving neuron is activated with no activation of the sending neuron. Thus, the pre-synaptic function is a difference of its activation and current synaptic weight&lt;/p&gt;
-
-&lt;p&gt;same signs → strengthen synapse&lt;/p&gt;
-
-&lt;p&gt;opposite signs → weaken synapse&lt;/p&gt;
-
-&lt;h3 id=&quot;hopfield-networks&quot;&gt;Hopfield Networks&lt;/h3&gt;
-
-&lt;h3 id=&quot;krotov-et-al-local-neuronal-error&quot;&gt;Krotov et al. Local Neuronal Error&lt;/h3&gt;
-
-&lt;h3 id=&quot;differentiable-plasticity&quot;&gt;Differentiable Plasticity&lt;/h3&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Technological Inertia</title><link href="http://iancarras.co/world-view/2019/12/22/technological-inertia.html" rel="alternate" type="text/html" title="Technological Inertia" /><published>2019-12-22T10:05:52-08:00</published><updated>2019-12-22T10:05:52-08:00</updated><id>http://iancarras.co/world-view/2019/12/22/technological-inertia</id><content type="html" xml:base="http://iancarras.co/world-view/2019/12/22/technological-inertia.html">&lt;p&gt;With the start of the new decade I’ve been thinking
+&lt;p&gt;Stay Tuned.&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Technological Inertia</title><link href="http://iancarras.co/world-view/2019/12/22/technological-inertia.html" rel="alternate" type="text/html" title="Technological Inertia" /><published>2019-12-22T10:05:52-08:00</published><updated>2019-12-22T10:05:52-08:00</updated><id>http://iancarras.co/world-view/2019/12/22/technological-inertia</id><content type="html" xml:base="http://iancarras.co/world-view/2019/12/22/technological-inertia.html">&lt;p&gt;With the start of the new decade I’ve been thinking
 about what technologies might define it whether it be
 (AR, AI, Edge Computing, 5G, etc.). When evaluating 
 developments and trends in consumer tech and research, I found
