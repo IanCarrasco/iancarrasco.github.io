@@ -450,4 +450,4 @@ blockquote { font-family: "ColfaxCaption"; }
 
 p { width: 100% !important; }
 
-/*# sourceMappingURL=main.css.map */
+@media screen and (max-width: 600px) { .site-nav { background-color: #222; border: 0px; } }

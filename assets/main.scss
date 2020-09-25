@@ -95,3 +95,9 @@
   }
   .page-content{
   }
+  @media screen and (max-width: 600px){
+    .site-nav{
+      background-color:#222;
+      border:0px;
+    }
+  }
