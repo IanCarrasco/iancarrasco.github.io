@@ -57,7 +57,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 @media screen and (max-width: 800px) { .wrapper { max-width: -webkit-calc(800px - (30px)); max-width: calc(800px - (30px)); padding-right: 15px; padding-left: 15px; } }
 
 /** Clearfix */
-.wrapper:after, .footer-col-wrapper:after { content: ""; display: table; clear: both; }
+.footer-col-wrapper:after, .wrapper:after { content: ""; display: table; clear: both; }
 
 /** Icons */
 .svg-icon { width: 16px; height: 16px; display: inline-block; fill: #828282; padding-right: 5px; vertical-align: text-top; }
@@ -92,14 +92,7 @@ table td { border: 1px solid #e8e8e8; }
 
 .site-nav .page-link:not(:last-child) { margin-right: 20px; }
 
-@media screen and (max-width: 600px) { .site-nav { position: absolute; top: 9px; right: 15px; background-color: #fdfdfd; border: 1px solid #e8e8e8; border-radius: 5px; text-align: right; }
-  .site-nav label[for="nav-trigger"] { display: block; float: right; width: 36px; height: 36px; z-index: 2; cursor: pointer; }
-  .site-nav .menu-icon { display: block; float: right; width: 36px; height: 26px; line-height: 0; padding-top: 10px; text-align: center; }
-  .site-nav .menu-icon > svg { fill: #424242; }
-  .site-nav input ~ .trigger { clear: both; display: none; }
-  .site-nav input:checked ~ .trigger { display: block; padding-bottom: 5px; }
-  .site-nav .page-link { display: block; padding: 5px 10px; margin-left: 20px; }
-  .site-nav .page-link:not(:last-child) { margin-right: 0; } }
+@media screen and (max-width: 600px) { .site-nav { position: absolute; top: 9px; right: 15px; background-color: #fdfdfd; border: 1px solid #e8e8e8; border-radius: 5px; text-align: right; } .site-nav label[for="nav-trigger"] { display: block; float: right; width: 36px; height: 36px; z-index: 2; cursor: pointer; } .site-nav .menu-icon { display: block; float: right; width: 36px; height: 26px; line-height: 0; padding-top: 10px; text-align: center; } .site-nav .menu-icon > svg { fill: #424242; } .site-nav input ~ .trigger { clear: both; display: none; } .site-nav input:checked ~ .trigger { display: block; padding-bottom: 5px; } .site-nav .page-link { display: block; padding: 5px 10px; margin-left: 20px; } .site-nav .page-link:not(:last-child) { margin-right: 0; } }
 
 /** Site footer */
 .site-footer { border-top: 1px solid #e8e8e8; padding: 30px 0; }
@@ -118,8 +111,7 @@ table td { border: 1px solid #e8e8e8; }
 
 .footer-col-3 { width: -webkit-calc(45% - (30px / 2)); width: calc(45% - (30px / 2)); }
 
-@media screen and (max-width: 800px) { .footer-col-1, .footer-col-2 { width: -webkit-calc(50% - (30px / 2)); width: calc(50% - (30px / 2)); }
-  .footer-col-3 { width: -webkit-calc(100% - (30px / 2)); width: calc(100% - (30px / 2)); } }
+@media screen and (max-width: 800px) { .footer-col-1, .footer-col-2 { width: -webkit-calc(50% - (30px / 2)); width: calc(50% - (30px / 2)); } .footer-col-3 { width: -webkit-calc(100% - (30px / 2)); width: calc(100% - (30px / 2)); } }
 
 @media screen and (max-width: 600px) { .footer-col { float: none; width: -webkit-calc(100% - (30px / 2)); width: calc(100% - (30px / 2)); } }
 
@@ -424,27 +416,35 @@ pre, code { background: #31343f !important; font-family: "SFMono"; }
 
 @font-face { font-family: "ColfaxCaption"; src: url("./fonts/colai/ColfaxAI-Caption.woff2"); }
 
+body { color: #fff !important; background-color: #000; }
+
 h1 { font-family: "ColfaxMedium"; }
 
 h2, h3, h4, h5, h6 { font-family: "Colfax"; }
 
-a:visited { color: #111; }
+a { color: #fff !important; }
 
-a:hover { text-decoration: none; color: #29dd74; transition: 0.2s; }
+a:visited { color: #fff; }
 
-.site-header { position: sticky; top: 0px; background-color: #fff; }
+a:hover { text-decoration: none; color: #29dd74 !important; transition: 0.3s; }
 
-.site-title { font-family: "ColfaxCaption"; }
+.site-header { position: sticky; margin-top: 10px; top: 0px; background-color: #000; color: #fff !important; }
+
+.site-title { font-family: "ColfaxCaption"; color: #fff !important; }
 
 blockquote { font-family: "ColfaxCaption"; }
 
 .post-title { font-family: "ColfaxMedium"; }
 
-.post-content { font-family: "Colfax"; }
+.wrapper { width: 600px; }
+
+.post-content { font-family: "Colfax"; color: #fff; }
 
 .post-content h2 { font-family: "ColfaxMedium"; }
 
-.site-header { box-shadow: 0 7px 14px 0 rgba(50, 50, 93, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07); border: 0px; }
+.site-header { border: 0px; color: #fff; }
+
+.site-footer { border-image: linear-gradient(to left, #ab58c4 10%, orange 50%, #ff5c5c 85%) 3; }
 
 .image-caption { text-align: center; font-size: .8rem; color: light-grey; }
 

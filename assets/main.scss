@@ -28,28 +28,38 @@
     src:url('./fonts/colai/ColfaxAI-Caption.woff2');
   
   }
+  body{
+    color:#fff !important;
+    background-color: #000;
+  }
   h1{
     font-family: "ColfaxMedium";
   }
   h2, h3, h4, h5, h6 {
     font-family: "Colfax"
   }
+  a{
+    color: #fff !important;
+  }
   a:visited{
-    color:#111;
+    color:#fff;
   }
   a:hover{
     text-decoration:none;
-    color:#29dd74;
-    transition:0.2s;
+    color:#29dd74 !important;
+    transition:0.3s;
   
   }
   .site-header{
     position:sticky;
+    margin-top: 10px;
     top:0px;
-    background-color: #fff;
+    background-color: #000;
+    color: #fff !important;
   }
   .site-title{
    font-family: "ColfaxCaption";
+   color: #fff !important;
   }
   blockquote{
     font-family: "ColfaxCaption";
@@ -57,18 +67,24 @@
   .post-title{
     font-family: "ColfaxMedium";
   }
+  .wrapper{
+    width: 600px;
+  }
   .post-content{
     font-family: "Colfax";
+    color: #fff;
   }
   .post-content h2{
     font-family: "ColfaxMedium";
   }
   .site-header{
   
-    box-shadow: 0 7px 14px 0 rgba(50,50,93,.1), 0 3px 6px 0 rgba(0,0,0,.07);
     border: 0px;
+    color: #fff;
   }
-
+  .site-footer{
+    border-image:   linear-gradient(to left, rgb(171, 88, 196) 10%, orange 50%,  rgb(255, 92, 92) 85%) 3;
+  }
   .image-caption {
     text-align: center;
     font-size: .8rem;
