@@ -426,7 +426,7 @@ a { color: #fff !important; }
 
 a:visited { color: #fff; }
 
-a:hover { text-decoration: none; color: #29dd74 !important; transition: 0.3s; }
+a:hover { text-decoration: none; color: #eea15a !important; transition: 0.3s; }
 
 .site-header { position: sticky; margin-top: 10px; top: 0px; background-color: #000; color: #fff !important; }
 
