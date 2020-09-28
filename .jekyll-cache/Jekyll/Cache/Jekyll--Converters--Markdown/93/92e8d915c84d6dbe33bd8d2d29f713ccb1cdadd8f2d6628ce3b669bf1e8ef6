@@ -1,16 +1,18 @@
-I"N<p><img src="/assets/pyramidal.jpg" alt="" /></p>
+I"�<p><a href="/assets/pyramidal.jpg"><img src="/assets/pyramidal.jpg" alt="" /></a></p>
 
 <p class="image-caption">Illustration of a pyramidal neuron in the cerebral cortex by Ramon y Cajal. <br /><em>Courtesy of the Cajal Institute</em></p>
 
 <h1 id="introduction-and-considerations">Introduction and Considerations</h1>
 
-<p>Understanding how learning occurs in the brain is a key question in neuroscience, alongside those of memory and visual processing. This is a particularly difficult problem, as with many other inquires about the brain, since it can be analyzed at many different scales (molecules, individual neurons, circuits, behavior) which can converge to varying hypotheses about the same process.</p>
+<p>Understanding how learning occurs in the brain is a key question in neuroscience, alongside those of memory and visual processing. This is a particularly difficult problem, as with many other inquires about the brain, since it can be analyzed at many different scales (molecules, individual neurons, circuits, behavior). In many cases this leads to varying hypotheses about the same process.</p>
 
-<p>Given the emergent nature of brain structure, there seems to be a tight coupling between the aforementioned scales. As an example, if we want to go about modeling the dynamics of a neural circuit,when observing the circuit’s behavior it would be naïve to not consider the impact of assumptions being made at smaller scales such as the working model for a single neuron.</p>
+<p>Given the emergent nature of brain structure, there seems to be a tight coupling between the aforementioned scales. Lets take an example of modeling the dynamics of a neural circuit. When observing a circuit’s dynamics, we are observing a process which is built upon assumptions of underlying structure which we would be naïve to not consider. Depending on the chosen working model of single neuron, a resulting model of circuit dynamics can be heavily influenced. Essentially, this comes down to recognizing when/where models are interconnected and understanding to some degree how assumptions can propagate within them.</p>
 
-<p>There tend to be two common approaches (not exclusive) when modelling brain function and higher level behavior in a computational setting. The first is to analyze the structure and dynamics of a neural system and building a computational model consistent with that structure. The second is to build a model which can perform a high-level task fairly well, and look for parallels at the computational and representational level after the fact. I like to call the first approach a bottom up/emergent view and the second approach a top-down/distillation view.</p>
+<p>Continuing on the theme of modeling, I want to classify two main approaches towards building systems with some resemblance to their biological counterparts.</p>
 
-<p><strong>Bottom-Up/Emergent (Structure -&gt; Behavior)</strong></p>
+<p>The first is to analyze the structure and dynamics of a neural system and building a computational model consistent with that structure. The second is to build a model which can perform a non-trival task fairly well, and look for parallels at the computational and representational level (Check Marr) post facto. I think the first approach can be seen as a bottom up/emergent view and the second approach a top-down/distillation view.</p>
+
+<p><span style="color:red">Bottom-Up/Emergent (Structure -&gt; Behavior)</span></p>
 <ol>
   <li>Attempt to model specific aspects of brain structure (connectivity patterns, cell types, etc.)</li>
   <li>Train on a given task and observe model’s behavior w.r.t human behavior</li>

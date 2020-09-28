@@ -1,0 +1,71 @@
+I"�<p><a href="/assets/pyramidal.jpg"><img src="/assets/pyramidal.jpg" alt="" /></a></p>
+
+<p class="image-caption">Illustration of a pyramidal neuron in the cerebral cortex by Ramon y Cajal. <br /><em>Courtesy of the Cajal Institute</em></p>
+
+<h1 id="introduction-and-considerations">Introduction and Considerations</h1>
+
+<p>Understanding how learning occurs in the brain is a key question in neuroscience, alongside those of memory and visual processing. This is a particularly difficult problem, as with many other inquires about the brain, since it can be analyzed at many different scales (molecules, individual neurons, circuits, behavior). In many cases this leads to varying hypotheses about the same process.</p>
+
+<p>Given the emergent nature of brain structure, there seems to be a tight coupling between the aforementioned scales. Lets take an example of modeling the dynamics of a neural circuit. When observing a circuit’s dynamics, we are observing a process which is built upon assumptions of underlying structure which we would be naïve to not consider. Depending on the chosen working model of single neuron, a resulting model of circuit dynamics can be heavily influenced. Essentially, this comes down to recognizing when/where models are interconnected and understanding to some degree how assumptions can propagate within them.</p>
+
+<p>Continuing on the theme of modeling, I want to classify two main approaches towards building systems with some resemblance to their biological counterparts.</p>
+
+<p>The first is to analyze the structure and dynamics of a neural system and building a computational model consistent with that structure. The second is to build a model which can perform a non-trival task fairly well, and look for parallels at the computational and representational level (Check Marr) post facto. I think the first approach can be seen as a bottom up/emergent view and the second approach a top-down/distillation view.</p>
+
+<p><strong><span style="color:red">Bottom-Up/Emergent (Structure -&gt; Behavior)</span></strong></p>
+<ol>
+  <li>Attempt to model specific aspects of brain structure (connectivity patterns, cell types, etc.)</li>
+  <li>Train on a given task and observe model’s behavior w.r.t human behavior</li>
+</ol>
+
+<p><strong>Top-Down/Distillation (Behavior -&gt; Structure)</strong></p>
+<ol>
+  <li>Identify a complex task humans are commonly able to solve</li>
+  <li>Build a model using existing deep learning approaches to try and solve said task</li>
+  <li>Observe model’s behavior with respect to human behavior, and draw parallels between ANN and brain structure using interpretability techiques and adversarial examples.</li>
+</ol>
+
+<p>An common approach to trying to build systems which performa is to use existing machine learning opposed to identifying what processes occur in the brain (i.e. object detection, planning) and attempting to emulate high-level behavior. For example, we see this displayed in works looking at parallels between CNNs and visio-cortical processing. Where instead of trying modeling the visual cortex by trying to model cortical neurons and connectivity patterns directly, we use our standard deep CNN architectures and observe if there are computational properties that arise similar to the visual cortex, such as edge detection and higher level processing as a function of layer depth. <a href="https://arxiv.org/pdf/2001.07092.pdf">https://arxiv.org/pdf/2001.07092.pdf</a></p>
+
+<hr />
+
+<p>With this thought aside, we’ll first look at a computational account of learning and synaptic plasticity in the brain known as Hebbian Learning (HL). Then, we’ll draw connections to some classical and modern machine learning architectures inspired by HL including Hopfield Nets, Competing Hidden Units, and Differentiable Plasticity.</p>
+
+<p>Throughout, the aim is to see how intuition about biological learning processes can be adapted into frameworks that are amenable for computation.</p>
+
+<p><img src="Hebbian%20Learning%20(Associative%20Learning)%20710be6c12ee34e7f97a1075bd7bbe425/Screen_Shot_2020-09-02_at_3.25.12_AM.png" alt="Hebbian%20Learning%20(Associative%20Learning)%20710be6c12ee34e7f97a1075bd7bbe425/Screen_Shot_2020-09-02_at_3.25.12_AM.png" /></p>
+
+<p>TODO: Add neuron diagram</p>
+
+<h1 id="what-is-hebbian-learning">What is Hebbian Learning?</h1>
+<p>At it’s core, hebbian learning states that if two neurons i (pre-synaptic) and j (post-synaptic) connected by a synapse, s,  the synaptic strength can be seen as a product of the pre- and post- synaptic activity, typically within the range of a small time window.</p>
+
+<p>From a causal perspective, timing is an important factor as neuron i has to fire just before neuron j to make a potential claim that i has a role in j’s firing, a case which under Hebb’s model would lead to a synapse strengthening. On the other hand, if the activity of j tends to be uncorrelated to that of i (i.e. j firing before i) then we’d tend to see a weakening of the synapse. The timing of neural activity contributing to both strengthing <strong>and weakening</strong> is captured by a generalization of Hebb’s rule known as Spike Time Dependent Plasticity (STDP), and is a widely accepted explanation for long-term potentiation and depression of neuron populations.</p>
+
+<h1 id="formalization-of-a-hebbian-learning-rule">Formalization of a Hebbian Learning Rule</h1>
+
+\[\Delta w_{ij} = \alpha \cdot x_i \cdot x_j\]
+
+<p>The Hebbian learning account provides an intuitive, experimentally backed framework for describing how synaptic weights change through time-correlated activity between neurons.</p>
+
+<p>Synapse strengthened (weight adjustment) when post-synaptic response occurs in conjunction with pre-synaptic firing. Pre-synaptic neuron has to fire “just before” post-synaptic neuron so causality can be inferred.</p>
+
+<p>Hebbian learning is an account of weight adjustment between neurons</p>
+
+<p>Hebb supports a real-time learning mechanism, where the temporal association of signals is important to the efficacy of a synapse and corresponding learning mechanisms which adjust it</p>
+
+<p>Non real-time learning error signals computed from system responses/order of inputs and outputs, but not the exact time of occurence of each input/output</p>
+
+<p>Hebbian LTP is seen in conjunction with Hetero-synaptic long term depression, where the receiving neuron is activated with no activation of the sending neuron. Thus, the pre-synaptic function is a difference of its activation and current synaptic weight</p>
+
+<p>same signs → strengthen synapse</p>
+
+<p>opposite signs → weaken synapse</p>
+
+<h3 id="hopfield-networks">Hopfield Networks</h3>
+
+<h3 id="krotov-et-al-local-neuronal-error">Krotov et al. Local Neuronal Error</h3>
+
+<h3 id="differentiable-plasticity">Differentiable Plasticity</h3>
+
+:ET

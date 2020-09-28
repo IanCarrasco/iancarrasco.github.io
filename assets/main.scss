@@ -56,6 +56,8 @@
     top:0px;
     background-color: #000;
     color: #fff !important;
+    border-image: linear-gradient(to left, rgb(171, 88, 196) 10%, orange 50%,  rgb(255, 92, 92) 85%) 3;
+    border-bottom: 1px;
   }
   .site-title{
    font-family: "ColfaxCaption";
@@ -81,6 +83,11 @@
   .post-content p{
     font-size: 1.1rem;
   }
+  .profile-pic{
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
   .site-header{
   
     border: 0px;
@@ -97,7 +104,14 @@
   p{
     width: 100% !important;
   }
-  .page-content{
+  .orange{
+    color:orange
+  }
+  .green{
+    color:rgb(58, 224, 161)
+  }
+  .underlit{
+    font-style: italic;
   }
   @media screen and (max-width: 600px){
     .site-nav{
@@ -108,3 +122,4 @@
       width:90vw !important;
     }
   }
+

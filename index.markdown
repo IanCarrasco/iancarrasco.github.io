@@ -5,9 +5,8 @@
 layout: page
 custom_css: homepage
 ---
-
-![](/assets/circleimage.png){: height="130" width="130"}
-<br/><br/>
+<!-- <img class="profile-pic" src="/assets/circleimage.png"> -->
+<br/>
 
 # Hi, I'm Ian.
 I am an undergraduate studying Cognitive Science and Computer Science @ UC San Diego, interested in developing biologically inspired deep learning algorithms. 
