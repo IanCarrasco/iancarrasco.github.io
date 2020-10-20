@@ -438,6 +438,8 @@ blockquote { font-family: "ColfaxCaption"; }
 
 .wrapper { width: 60vw; }
 
+.MJXc-display { position: relative !important; z-index: -1; margin: 1.5em 0 !important; }
+
 .post-content { font-family: "Colfax"; color: #fff; }
 
 .post-content h2 { font-family: "ColfaxMedium"; font-size: 1.6rem; }

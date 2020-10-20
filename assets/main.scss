@@ -72,6 +72,11 @@
   .wrapper{
     width: 60vw;
   }
+  .MJXc-display{
+    position: relative !important;
+    z-index: -1;
+    margin: 1.5em 0 !important;
+  }
   .post-content{
     font-family: "Colfax";
     color: #fff;
