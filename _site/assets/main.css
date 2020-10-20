@@ -450,7 +450,7 @@ blockquote { font-family: "ColfaxCaption"; }
 
 .site-header { border: 0px; color: #ffffff; }
 
-.site-footer { border-image: linear-gradient(to left, #ab58c4 10%, orange 50%, #ff5c5c 85%) 3; }
+.site-footer { border-image: linear-gradient(to left, #ab58c4 10%, orange 50%, #ff5c5c 85%) 3; border: 0px; border-top: 1px solid #1e1e1e !important; }
 
 .image-caption { text-align: center; font-size: .8rem !important; color: light-grey; }
 

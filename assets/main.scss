@@ -100,6 +100,8 @@
   }
   .site-footer{
     border-image:   linear-gradient(to left, rgb(171, 88, 196) 10%, orange 50%,  rgb(255, 92, 92) 85%) 3;
+    border: 0px;
+    border-top: 1px solid #1e1e1e !important;
   }
   .image-caption {
     text-align: center;
