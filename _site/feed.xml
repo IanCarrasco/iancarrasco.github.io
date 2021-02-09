@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://iancarras.co/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iancarras.co/" rel="alternate" type="text/html" /><updated>2021-01-02T00:00:27-08:00</updated><id>http://iancarras.co/feed.xml</id><title type="html">Ian Carrasco</title><subtitle>A blog, resume, and archive of things I'm interested in and have worked on.</subtitle><entry><title type="html">Notes from Talks</title><link href="http://iancarras.co/2020/09/25/talks.html" rel="alternate" type="text/html" title="Notes from Talks" /><published>2020-09-25T11:05:52-07:00</published><updated>2020-09-25T11:05:52-07:00</updated><id>http://iancarras.co/2020/09/25/talks</id><content type="html" xml:base="http://iancarras.co/2020/09/25/talks.html">&lt;p&gt;This page is going to be an ongoing list of notes from talks/lectures I’ve watched.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://iancarras.co/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iancarras.co/" rel="alternate" type="text/html" /><updated>2021-02-08T18:22:10-08:00</updated><id>http://iancarras.co/feed.xml</id><title type="html">Ian Carrasco</title><subtitle>A blog, resume, and archive of things I'm interested in and have worked on.</subtitle><entry><title type="html">Two Spread Voicings for Jazz Piano</title><link href="http://iancarras.co/music/2021/01/22/spread-voicings.html" rel="alternate" type="text/html" title="Two Spread Voicings for Jazz Piano" /><published>2021-01-22T10:05:52-08:00</published><updated>2021-01-22T10:05:52-08:00</updated><id>http://iancarras.co/music/2021/01/22/spread-voicings</id><content type="html" xml:base="http://iancarras.co/music/2021/01/22/spread-voicings.html">&lt;p&gt;The chords used in jazz piano evoke a certain quality and richness that is achieved through the use of extensions and open voicings. Here, I quickly talk about two particular examples derived from Herbie Hancock and Kenny Barron that I particularly like.&lt;/p&gt;
+
+&lt;h2 id=&quot;kenny-baron-spread-voicing&quot;&gt;Kenny Baron Spread Voicing&lt;/h2&gt;
+
+&lt;p&gt;The Kenny Baron voicing is built on a set of stacked fifth intervals (fifths) like so. It has a much more open sound compared to the following voicing due to the larger intervals in the right hand.&lt;/p&gt;
+
+&lt;h3 id=&quot;formula&quot;&gt;Formula&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class=&quot;orange&quot;&gt;Left Hand:&lt;/span&gt;&lt;/strong&gt; Root - Up 5th - Up 5th&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span class=&quot;orange&quot;&gt;Right Hand:&lt;/span&gt;&lt;/strong&gt; Minor or Major 3rd - Up 5th - Up 5th&lt;/p&gt;
+
+&lt;h3 id=&quot;example&quot;&gt;Example&lt;/h3&gt;
+&lt;p&gt;Chord: Am7&lt;/p&gt;
+
+&lt;p&gt;Root note is A&lt;/p&gt;
+
+&lt;p&gt;Left  Hand: &lt;strong&gt;&lt;span class=&quot;green&quot;&gt;A&lt;/span&gt;&lt;/strong&gt; (Root) + &lt;strong&gt;&lt;span class=&quot;green&quot;&gt;E&lt;/span&gt;&lt;/strong&gt; (5th from A) + &lt;strong&gt;&lt;span class=&quot;green&quot;&gt;B&lt;/span&gt;&lt;/strong&gt; (5th from E)&lt;/p&gt;
+
+&lt;p&gt;Right Hand: &lt;strong&gt;&lt;span class=&quot;green&quot;&gt;C&lt;/span&gt;&lt;/strong&gt; (Minor 3rd in A) + &lt;strong&gt;&lt;span class=&quot;green&quot;&gt;G&lt;/span&gt;&lt;/strong&gt; (5th from C) + &lt;strong&gt;&lt;span class=&quot;green&quot;&gt;D&lt;/span&gt;&lt;/strong&gt; (5th from G)&lt;/p&gt;
+
+&lt;h2 id=&quot;herbie-hancock-spread-voicing&quot;&gt;Herbie Hancock Spread Voicing&lt;/h2&gt;
+
+&lt;p&gt;The Herbie Hancock voicing is built on a set of stacked fifth intervals (fifths) in the left hand similar to the Barron voicings but uses a more closed right hand which adds tension. (Major/Minor chord in 3rd inversion)&lt;/p&gt;
+
+&lt;h3 id=&quot;formula-1&quot;&gt;Formula&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span class=&quot;orange&quot;&gt;Left Hand:&lt;/span&gt;&lt;/strong&gt; Root - Up 5th - Up 5th&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span class=&quot;orange&quot;&gt;Right Hand:&lt;/span&gt;&lt;/strong&gt; Minor/Major 6th - Up 4th - Up Minor 3rd&lt;/p&gt;
+
+&lt;h3 id=&quot;example-1&quot;&gt;Example&lt;/h3&gt;
+&lt;p&gt;Chord: Am7&lt;/p&gt;
+
+&lt;p&gt;Root note is A&lt;/p&gt;
+
+&lt;p&gt;Left  Hand: &lt;strong&gt;&lt;span class=&quot;green&quot;&gt;A&lt;/span&gt;&lt;/strong&gt; (Root) + &lt;strong&gt;&lt;span class=&quot;green&quot;&gt;E&lt;/span&gt;&lt;/strong&gt; (5th from A) + &lt;strong&gt;&lt;span class=&quot;green&quot;&gt;B&lt;/span&gt;&lt;/strong&gt; (5th from E)&lt;/p&gt;
+
+&lt;p&gt;Right Hand: &lt;strong&gt;&lt;span class=&quot;green&quot;&gt;G&lt;/span&gt;&lt;/strong&gt; (Minor 6th in A) + &lt;strong&gt;&lt;span class=&quot;green&quot;&gt;C&lt;/span&gt;&lt;/strong&gt; (4th from G) + &lt;strong&gt;&lt;span class=&quot;green&quot;&gt;Eb&lt;/span&gt;&lt;/strong&gt; (Minor 3rd from C)&lt;/p&gt;</content><author><name></name></author><category term="Music" /><summary type="html">The chords used in jazz piano evoke a certain quality and richness that is achieved through the use of extensions and open voicings. Here, I quickly talk about two particular examples derived from Herbie Hancock and Kenny Barron that I particularly like.</summary></entry><entry><title type="html">Notes from Talks/Books</title><link href="http://iancarras.co/perspective/2020/09/25/talks.html" rel="alternate" type="text/html" title="Notes from Talks/Books" /><published>2020-09-25T11:05:52-07:00</published><updated>2020-09-25T11:05:52-07:00</updated><id>http://iancarras.co/perspective/2020/09/25/talks</id><content type="html" xml:base="http://iancarras.co/perspective/2020/09/25/talks.html">&lt;p&gt;This page is going to be an ongoing list of notes from talks/lectures/books I’ve watched and read.&lt;/p&gt;
 
 &lt;h2 id=&quot;ajay-banga---taking-risks-in-your-life-and-career&quot;&gt;Ajay Banga - Taking Risks in Your Life and Career&lt;/h2&gt;
 &lt;ul&gt;
@@ -16,7 +52,23 @@
   &lt;/li&gt;
   &lt;li&gt;Important to consider what &lt;strong&gt;and how&lt;/strong&gt; you do something&lt;/li&gt;
   &lt;li&gt;Deal with adversity, don’t try to avoid it.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">This page is going to be an ongoing list of notes from talks/lectures I’ve watched.</summary></entry><entry><title type="html">Introducing the NeuroAI Series</title><link href="http://iancarras.co/2020/01/15/intronai.html" rel="alternate" type="text/html" title="Introducing the NeuroAI Series" /><published>2020-01-15T10:05:52-08:00</published><updated>2020-01-15T10:05:52-08:00</updated><id>http://iancarras.co/2020/01/15/intronai</id><content type="html" xml:base="http://iancarras.co/2020/01/15/intronai.html">&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/2/20/Rat_hippocampus_stained_with_antibody_to_NeuN_%28green%29%2C_myelin_basic_protein_%28red%29_and_DNA_%28blue%29.jpg&quot; alt=&quot;&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;elon-musk-biography---ashlee-vance&quot;&gt;Elon Musk Biography - Ashlee Vance&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Be &lt;strong&gt;highly data-driven&lt;/strong&gt; and &lt;strong&gt;rational&lt;/strong&gt; when making decisions and analyzing failures. This can be through extensively logging metrics, adding new sensors, etc… &lt;strong&gt;Prevent making the same mistake twice at all costs&lt;/strong&gt;.
+This was heavily emphasized due to the large time and financial investment with SpaceX testing, but still should be generally applicable.&lt;/li&gt;
+  &lt;li&gt;Principles First Thinking - &lt;strong&gt;Don’t accept ideas on the basis of them being around for a long time&lt;/strong&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;What made Tesla and SpaceX so innovative was the removal of a lot of the beureaucratic, slow development cycles that have plagued the automotive and aerospace industries. Think if an important component of a product can be redesigned to be faster, better, and cheaper, before accepting existing options. If the investment in optimizing this one part is too high that it could stunt overall progress, then evaluate other options.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Listen to well-structured arguments and don’t base resulting decisions on the merits of the people presenting them, but rather the argument in its logical form.&lt;/li&gt;
+  &lt;li&gt;Loyalty and determination arises in the presence of adversity.&lt;/li&gt;
+  &lt;li&gt;Try to &lt;strong&gt;surround yourself with the best&lt;/strong&gt;. Know the places that the people you look up to frequent.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Set ambitious deadlines&lt;/strong&gt; in order to have work materialize faster. In the case that
+a project runs longer than expected, there is still room to stay on schedule in the near-term.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Perspective" /><summary type="html">This page is going to be an ongoing list of notes from talks/lectures/books I’ve watched and read.</summary></entry><entry><title type="html">Introducing the NeuroAI Series</title><link href="http://iancarras.co/ai/neuro/2020/01/15/intronai.html" rel="alternate" type="text/html" title="Introducing the NeuroAI Series" /><published>2020-01-15T10:05:52-08:00</published><updated>2020-01-15T10:05:52-08:00</updated><id>http://iancarras.co/ai/neuro/2020/01/15/intronai</id><content type="html" xml:base="http://iancarras.co/ai/neuro/2020/01/15/intronai.html">&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/2/20/Rat_hippocampus_stained_with_antibody_to_NeuN_%28green%29%2C_myelin_basic_protein_%28red%29_and_DNA_%28blue%29.jpg&quot; alt=&quot;&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
 
 &lt;p class=&quot;image-caption&quot;&gt;NeuN Stain of a Rat Hippocampus&lt;/p&gt;
 &lt;h3 id=&quot;motivation&quot;&gt;Motivation&lt;/h3&gt;
@@ -35,7 +87,83 @@ is still in its infancy. A more common approach that is to ask if existing mecha
 “neurons that fire together wire together”. We will first look at the principle from a neuroscience lens, then move into its
 computational formulation by looking at a paper by Miconi, Clune, et al. (Uber AI), &lt;em&gt;Differentiable plasticity: training plastic neural networks with backpropagation&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Stay Tuned.&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Technological Inertia</title><link href="http://iancarras.co/world-view/2019/12/22/technological-inertia.html" rel="alternate" type="text/html" title="Technological Inertia" /><published>2019-12-22T10:05:52-08:00</published><updated>2019-12-22T10:05:52-08:00</updated><id>http://iancarras.co/world-view/2019/12/22/technological-inertia</id><content type="html" xml:base="http://iancarras.co/world-view/2019/12/22/technological-inertia.html">&lt;p&gt;With the start of the new decade I’ve been thinking
+&lt;p&gt;Stay Tuned.&lt;/p&gt;</content><author><name></name></author><category term="AI" /><category term="Neuro" /><summary type="html"></summary></entry><entry><title type="html">Hebbian Learning | NeuroAI #1</title><link href="http://iancarras.co/neuro/2020/01/15/hebbian.html" rel="alternate" type="text/html" title="Hebbian Learning | NeuroAI #1" /><published>2020-01-15T10:05:52-08:00</published><updated>2020-01-15T10:05:52-08:00</updated><id>http://iancarras.co/neuro/2020/01/15/hebbian</id><content type="html" xml:base="http://iancarras.co/neuro/2020/01/15/hebbian.html">&lt;p&gt;&lt;a href=&quot;/assets/pyramidal.jpg&quot;&gt;&lt;img src=&quot;/assets/pyramidal.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p class=&quot;image-caption&quot;&gt;Illustration of a pyramidal neuron in the cerebral cortex by Ramon y Cajal. &lt;br /&gt;&lt;em&gt;Courtesy of the Cajal Institute&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;introduction-and-considerations&quot;&gt;Introduction and Considerations&lt;/h1&gt;
+
+&lt;p&gt;Understanding how learning occurs in the brain is a key problem in neuroscience. One key reason is due to its different scales (molecules, individual neurons, circuits, behavior). In some cases, this can lead to varying hypotheses about the same high-level process, in this case learning.&lt;/p&gt;
+
+&lt;p&gt;Given the emergent nature of brain structure, there seems to be a tight coupling between these scales. For example, when modeling a neural its dynamics, the resulting model can be influenced by assumptions of lower-level structure, which would be naïve to not consider. In the case of neural circuit dynamics, the choice of single neuron model (i.e. Hodgkin-Huxley, Leaky Integrate-and-Fire, etc), could add new constraints and/or unexpected behaviors.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Essentially, this idea comes down to recognizing when models are interconnected and understanding how assumptions can propagate across scales.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/pyramidal.levels.png&quot;&gt;&lt;img src=&quot;/assets/levels.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p class=&quot;image-caption&quot;&gt;Levels of analysis in the brain &lt;br /&gt;&lt;em&gt;Courtesy of Terrence Sejnowski&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;With this in mind, I want to classify two main approaches towards building computational models that share key aspects with their biological counterparts. This formalization is not exhaustive, but can be used to classify a good portion of neuro/ai papers.&lt;/p&gt;
+
+&lt;p&gt;The first is to &lt;strong&gt;analyze the structure and dynamics of a neural system and then build a computational model consistent with that structure&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The second is to &lt;strong&gt;build a system which can perform an innately human task well and then identify parallels with the brain at computational and representational levels&lt;/strong&gt; (Marr, 1976 &lt;a href=&quot;https://dspace.mit.edu/handle/1721.1/5782&quot;&gt;Link&lt;/a&gt;). The first approach can be seen as a bottom up/emergent view, whereas the second approach a top-down/distillation view.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span class=&quot;orange&quot;&gt;Bottom-Up/Emergent View (Structure → Behavior)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Attempt to model specific aspects of brain structure (connectivity patterns, cell types, etc.)&lt;/li&gt;
+    &lt;li&gt;Train on a given task and observe model’s behavior w.r.t human behavior&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span class=&quot;orange&quot;&gt;Top-Down/Distillation View (Behavior → Structure)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Identify a complex task humans are commonly able to solve&lt;/li&gt;
+    &lt;li&gt;Build a model using existing deep learning approaches to try and solve said task&lt;/li&gt;
+    &lt;li&gt;Observe model’s behavior with respect to human behavior, and draw parallels between ANN and brain structure using interpretability techiques, adversarial examples, etc.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- An common approach to trying to build systems which performa is to use existing machine learning opposed to identifying what processes occur in the brain (i.e. object detection, planning) and attempting to emulate high-level behavior. For example, we see this displayed in works looking at parallels between CNNs and visio-cortical processing. Where instead of trying modeling the visual cortex by trying to model cortical neurons and connectivity patterns directly, we use our standard deep CNN architectures and observe if there are computational properties that arise similar to the visual cortex, such as edge detection and higher level processing as a function of layer depth. [https://arxiv.org/pdf/2001.07092.pdf](https://arxiv.org/pdf/2001.07092.pdf) --&gt;
+
+&lt;p&gt;With these thoughts aside, we’ll first look at a computational account of learning and synaptic plasticity in the brain known as Hebbian Learning (HL). Then, we’ll draw connections to some classical and modern machine learning architectures inspired by HL including Hopfield Nets, Competing Hidden Units, and Differentiable Plasticity.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hebb.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-hebbian-learning&quot;&gt;What is Hebbian Learning?&lt;/h1&gt;
+&lt;p&gt;At it’s core, hebbian learning states that if two neurons &lt;strong&gt;&lt;span class=&quot;green underlit&quot;&gt;i&lt;/span&gt;&lt;/strong&gt; (pre-synaptic) and &lt;strong&gt;&lt;span class=&quot;green underlit&quot;&gt;j&lt;/span&gt;&lt;/strong&gt; (post-synaptic) connected by a synapse, &lt;strong&gt;&lt;span class=&quot;green underlit&quot;&gt;s&lt;/span&gt;&lt;/strong&gt;, the synaptic strength can be seen as a product of the pre- and post- synaptic activity, typically within the range of a small time window (300ms).&lt;/p&gt;
+
+&lt;p&gt;From a causal perspective, timing is an important factor as neuron &lt;strong&gt;&lt;span class=&quot;green underlit&quot;&gt;i&lt;/span&gt;&lt;/strong&gt; has to fire just before neuron &lt;strong&gt;&lt;span class=&quot;green underlit&quot;&gt;j&lt;/span&gt;&lt;/strong&gt; to make a potential claim that i has a role in j’s firing, a case which under Hebb’s model would lead to a synaptic strengthening.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, if the activity of j tends to be uncorrelated to that of i (i.e. j firing before i) then we’d tend to see a weakening of the synapse. The timing of neural activity contributing to both strengthing &lt;strong&gt;and weakening&lt;/strong&gt; is captured by a generalization of Hebb’s rule known as Spike Time Dependent Plasticity (STDP), and is a widely accepted explanation for long-term potentiation and depression of neuron populations.&lt;/p&gt;
+
+&lt;h1 id=&quot;formalization-of-a-hebbian-learning-rule&quot;&gt;Formalization of a Hebbian Learning Rule&lt;/h1&gt;
+
+\[\Delta w_{ij} = \alpha \cdot x_i \cdot x_j\]
+
+&lt;p&gt;The Hebbian learning account provides an intuitive, experimentally backed framework for describing how synaptic weights change through time-correlated activity between neurons.&lt;/p&gt;
+
+&lt;p&gt;Synapse strengthened (weight adjustment) when post-synaptic response occurs in conjunction with pre-synaptic firing. Pre-synaptic neuron has to fire “just before” post-synaptic neuron so causality can be inferred.&lt;/p&gt;
+
+&lt;p&gt;Hebbian learning is an account of weight adjustment between neurons&lt;/p&gt;
+
+&lt;p&gt;Hebb supports a real-time learning mechanism, where the temporal association of signals is important to the efficacy of a synapse and corresponding learning mechanisms which adjust it&lt;/p&gt;
+
+&lt;p&gt;Non real-time learning error signals computed from system responses/order of inputs and outputs, but not the exact time of occurence of each input/output&lt;/p&gt;
+
+&lt;p&gt;Hebbian LTP is seen in conjunction with Hetero-synaptic long term depression, where the receiving neuron is activated with no activation of the sending neuron. Thus, the pre-synaptic function is a difference of its activation and current synaptic weight&lt;/p&gt;
+
+&lt;p&gt;same signs → strengthen synapse&lt;/p&gt;
+
+&lt;p&gt;opposite signs → weaken synapse&lt;/p&gt;
+
+&lt;h3 id=&quot;hopfield-networks&quot;&gt;Hopfield Networks&lt;/h3&gt;
+
+&lt;h3 id=&quot;krotov-et-al-local-neuronal-error&quot;&gt;Krotov et al. Local Neuronal Error&lt;/h3&gt;
+
+&lt;h3 id=&quot;differentiable-plasticity&quot;&gt;Differentiable Plasticity&lt;/h3&gt;</content><author><name></name></author><category term="Neuro" /><summary type="html"></summary></entry><entry><title type="html">Technological Inertia</title><link href="http://iancarras.co/perspective/2019/12/22/technological-inertia.html" rel="alternate" type="text/html" title="Technological Inertia" /><published>2019-12-22T10:05:52-08:00</published><updated>2019-12-22T10:05:52-08:00</updated><id>http://iancarras.co/perspective/2019/12/22/technological-inertia</id><content type="html" xml:base="http://iancarras.co/perspective/2019/12/22/technological-inertia.html">&lt;p&gt;With the start of the new decade I’ve been thinking
 about what technologies might define it whether it be
 (AR, AI, Edge Computing, 5G, etc.). When evaluating 
 developments and trends in consumer tech and research, I found
@@ -55,4 +183,4 @@ technology in order to use it.&lt;/p&gt;
 
 &lt;p&gt;Consumers have inherent inertia, a tendency to stick with what works. When the balance of &lt;strong&gt;familiarity and innovation&lt;/strong&gt; of an idea is not level, this inertial force is greater than the “force”(marketing, innovation, design) of an idea. Thus, leading to minimal or low adoption. If this balance is maintained, an idea will have a much better chance at being adopted.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Note: The term is derived from inertia in classical mechanics, which is an object’s resistance to change or tendency to stay at rest.&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><category term="world-view" /><summary type="html">With the start of the new decade I’ve been thinking about what technologies might define it whether it be (AR, AI, Edge Computing, 5G, etc.). When evaluating developments and trends in consumer tech and research, I found myself continually thinking about the dynamics of how new technologies are adopted in society and make their way into the status quo. In particular, I came up with a concept I call technological inertia, whose definition might be trivial, but I felt succinctly captures an important consideration when ideating.</summary></entry></feed>
+&lt;p&gt;&lt;em&gt;Note: The term is derived from inertia in classical mechanics, which is an object’s resistance to change or tendency to stay at rest.&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><category term="Perspective" /><summary type="html">With the start of the new decade I’ve been thinking about what technologies might define it whether it be (AR, AI, Edge Computing, 5G, etc.). When evaluating developments and trends in consumer tech and research, I found myself continually thinking about the dynamics of how new technologies are adopted in society and make their way into the status quo. In particular, I came up with a concept I call technological inertia, whose definition might be trivial, but I felt succinctly captures an important consideration when ideating.</summary></entry></feed>

@@ -130,3 +130,38 @@
     }
   }
 
+.post-tag{
+  background-color: green;
+  width: fit-content;
+  padding: 7px;
+  font-size: 1rem;
+  display: inline !important;
+  border-radius: 50vw;
+  height: 15px;
+  line-height: 15px;
+  color: white;
+  margin-left: 1vw;
+}
+.post-list > li{
+  display: flex;
+  flex-direction: column;
+  vertical-align: center;
+}
+.title-tags{
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+}
+.Music-tag{
+  background-color:#307ff5;
+}
+.Perspective-tag{
+  background-color: rgb(47, 206, 153);
+}
+
+.AI-tag{
+  background-color: blueviolet;
+}
+.Neuro-tag{
+  background-color: orange;
+}

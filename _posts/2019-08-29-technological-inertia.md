@@ -2,7 +2,7 @@
 layout: post
 title:  "Technological Inertia"
 date:   2019-12-22 11:05:52 -0700
-categories: world-view
+categories: Perspective
 published: true
 ---
 With the start of the new decade I've been thinking

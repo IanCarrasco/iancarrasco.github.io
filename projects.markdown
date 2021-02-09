@@ -1,10 +1,11 @@
 ---
-layout: page
-title: Projects
-permalink: /projects/
----
-Exoplanet Classification with Joint CNN + GRU Encoders <span>[[Paper]](https://drive.google.com/file/d/1ATKAxowTVlUazOoJAEGGTRP0pnYFEA3-/view?usp=sharing)[[Code]](https://github.com/IanCarrasco/exoplanet-recognition)</span>
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-Ark \| A Platform for Understanding Research Articles [[Site]](https://ark-prgqycdmwo.now.sh/)
+layout: page
+custom_css: homepage
+---
+<!-- <img class="profile-pic" src="/assets/circleimage.png"> -->
+### Email: iancarrasco99<at gmail.com>
 
 

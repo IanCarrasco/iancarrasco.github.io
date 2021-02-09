@@ -57,37 +57,39 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">Work</h1>
+    <h1 class="post-title p-name" itemprop="name headline">Introducing the NeuroAI Series</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-01-15T10:05:52-08:00" itemprop="datePublished">Jan 15, 2020
+      </time></p>
   </header>
 
-  <div class="post-content">
-    <h3 id="summer-2020--ml-engineering-intern--servicenow"><span class="orange">Summer 2020</span> | ML Engineering Intern @ ServiceNow</h3>
-<blockquote>
-  <p>Performed benchmarks and experimented with runtime improvements for document clustering using Python.
-Prototyped an asynchronous training job manager integrating Servicenow’s AI offerings using Python and Falcon.</p>
-</blockquote>
+  <div class="post-content e-content" itemprop="articleBody">
+    <p style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Rat_hippocampus_stained_with_antibody_to_NeuN_%28green%29%2C_myelin_basic_protein_%28red%29_and_DNA_%28blue%29.jpg" alt="" height="300" /></p>
 
-<h3 id="winter-2020--software-engineering-intern--google"><span class="orange">Winter 2020</span> | Software Engineering Intern @ Google</h3>
-<blockquote>
-  <p>Researched the use of generative adversarial networks (GANs) using Tensorflow to perform end-to-end translation of satellite imagery to map features. Developed a novel architecture based on dilated convoluations for generation of images that require spatial context, produced qualitatively better results than Pix2Pix.</p>
-</blockquote>
+<p class="image-caption">NeuN Stain of a Rat Hippocampus</p>
+<h3 id="motivation">Motivation</h3>
+<p>In the coming posts, I’m going to break down some
+of the foundational and recent work in neuroscience-inspired
+AI or NeuroAI for short. I believe this field has a lot of 
+promise in regards to building systems that have general 
+intelligence and reasoning capabilities. In their current state, deep learning architectures under-represent
+several of the structural and dynamical aspects of neurons and their corresponding networks seen in the brain. Some 
+of these aspects include cell diversity, spatial organization, and neuromodulation.</p>
 
-<h3 id="summer-2019--systems-engineering-intern--servicenow"><span class="orange">Summer 2019</span> | Systems Engineering Intern @ ServiceNow</h3>
-<blockquote>
-  <p>Developed domain-specific modeling techniques for anomaly detection in mail
-server logs using Splunk and Python. Additionally, built a notification system using the Slack API to reduce incident triage times from several days to ~2 hours.</p>
-</blockquote>
+<p>While taking the approach of applying known phenomena from neuroscience to AI can lead to interesting, novel developments, it
+is still in its infancy. A more common approach that is to ask if existing mechanisms are biologically plausible. It could very well be the case that staying true to biological limitations may not be the proper approach. One such reason could be due to the fundamental differences in computation that occur across different substrates (human brains and computers). Continuing with this point, neuroscience should be viewed as a source of inspiration rather than a guide to follow strictly. As more developments occur,this dichotomy might change but only time will tell. I find this area to be particularly exciting as it makes one consider the assumptions made about the brain that influenced the design of artificial neural networks. Additionally and most importantly, it provides a basis to challenge these assumptions with new algorithms and architectures.</p>
 
-<h3 id="summer-2018--software-engineering-intern--here-maps"><span class="orange">Summer 2018</span> | Software Engineering Intern @ HERE Maps</h3>
-<blockquote>
-  <p>Integrated React and MobX to visualize high frequency car sensor data for car manufacturers to simulate road hazard events and analyze specific product offerings.</p>
-</blockquote>
+<p>The first post in the series will be about the principle of <strong>Hebbian Learning</strong>. Which is colloquially known via the popular phrase
+“neurons that fire together wire together”. We will first look at the principle from a neuroscience lens, then move into its
+computational formulation by looking at a paper by Miconi, Clune, et al. (Uber AI), <em>Differentiable plasticity: training plastic neural networks with backpropagation</em>.</p>
 
-  </div>
+<p>Stay Tuned.</p>
 
+
+  </div><a class="u-url" href="/ai/neuro/2020/01/15/intronai.html" hidden></a>
 </article>
 
       </div>

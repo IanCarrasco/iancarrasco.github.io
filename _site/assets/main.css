@@ -464,4 +464,18 @@ p { width: 100% !important; }
 
 @media screen and (max-width: 600px) { .site-nav { background-color: #222 !important; border: 0px !important; } .wrapper { width: 90vw !important; } }
 
+.post-tag { background-color: green; width: fit-content; padding: 7px; font-size: 1rem; display: inline !important; border-radius: 50vw; height: 15px; line-height: 15px; color: white; margin-left: 1vw; }
+
+.post-list > li { display: flex; flex-direction: column; vertical-align: center; }
+
+.title-tags { display: flex; flex-direction: row !important; align-items: center; }
+
+.Music-tag { background-color: #307ff5; }
+
+.Perspective-tag { background-color: #2fce99; }
+
+.AI-tag { background-color: blueviolet; }
+
+.Neuro-tag { background-color: orange; }
+
 /*# sourceMappingURL=main.css.map */
