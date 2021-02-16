@@ -1,4 +1,4 @@
-I"z<h3 id="summer-2020--ml-engineering-intern--servicenow"><span class="orange">Summer 2020</span> | ML Engineering Intern @ ServiceNow</h3>
+I"2<h3 id="summer-2020--ml-engineering-intern--servicenow"><span class="orange">Summer 2020</span> | ML Engineering Intern @ ServiceNow</h3>
 <blockquote>
   <p>Performed benchmarks and experimented with runtime improvements for document clustering using Python.
 Prototyped an asynchronous training job manager integrating Servicenow’s AI offerings using Python and Falcon.</p>
@@ -6,7 +6,7 @@ Prototyped an asynchronous training job manager integrating Servicenow’s AI of
 
 <h3 id="winter-2020--software-engineering-intern--google"><span class="orange">Winter 2020</span> | Software Engineering Intern @ Google</h3>
 <blockquote>
-  <p>Researched the use of generative adversarial networks (GANs) using Tensorflow to perform end-to-end translation of satellite imagery to map features. Developed a novel architecture based on dilated convoluations for generation of images that require spatial context, produced qualitatively better results than Pix2Pix.</p>
+  <p>Researched the use of generative adversarial networks (GANs) using Tensorflow. Developed a novel architecture based on dilated convolutions for generation of images that require spatial context, produced qualitatively better results than Pix2Pix.</p>
 </blockquote>
 
 <h3 id="summer-2019--systems-engineering-intern--servicenow"><span class="orange">Summer 2019</span> | Systems Engineering Intern @ ServiceNow</h3>

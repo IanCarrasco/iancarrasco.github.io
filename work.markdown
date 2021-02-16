@@ -9,7 +9,7 @@ custom-css: work
 >Prototyped an asynchronous training job manager integrating Servicenow's AI offerings using Python and Falcon.
 
 ### <span class="orange">Winter 2020</span> | Software Engineering Intern @ Google
->Researched the use of generative adversarial networks (GANs) using Tensorflow to perform end-to-end translation of satellite imagery to map features. Developed a novel architecture based on dilated convoluations for generation of images that require spatial context, produced qualitatively better results than Pix2Pix.
+>Researched the use of generative adversarial networks (GANs) using Tensorflow. Developed a novel architecture based on dilated convolutions for generation of images that require spatial context, produced qualitatively better results than Pix2Pix.
 
 ### <span class="orange">Summer 2019</span> | Systems Engineering Intern @ ServiceNow
 >Developed domain-specific modeling techniques for anomaly detection in mail
