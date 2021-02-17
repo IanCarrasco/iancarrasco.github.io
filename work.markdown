@@ -4,14 +4,14 @@ title: Work
 permalink: /work/
 custom-css: work
 ---
-### <span class="orange">Summer 2020</span> | ML Engineering Intern @ ServiceNow
+### ML Engineering Intern @ ServiceNow | <span class="orange">Summer 2020</span>
 >Performed benchmarks and experimented with runtime improvements for document clustering using Python.
 >Prototyped an asynchronous training job manager integrating Servicenow's AI offerings using Python and Falcon.
 
-### <span class="orange">Winter 2020</span> | Software Engineering Intern @ Google
+### Software Engineering Intern @ Google | <span class="orange">Winter 2020</span>
 >Researched the use of generative adversarial networks (GANs) using Tensorflow. Developed a novel architecture based on dilated convolutions for generation of images that require spatial context, produced qualitatively better results than Pix2Pix.
 
-### <span class="orange">Summer 2019</span> | Systems Engineering Intern @ ServiceNow
+### Systems Engineering Intern @ ServiceNow | <span class="orange">Summer 2019</span>
 >Developed domain-specific modeling techniques for anomaly detection in mail
 >server logs using Splunk and Python. Additionally, built a notification system using the Slack API to reduce incident triage times from several days to ~2 hours.
 

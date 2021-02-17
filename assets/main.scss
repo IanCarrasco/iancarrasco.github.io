@@ -135,12 +135,16 @@
   width: fit-content;
   padding: 7px;
   font-size: 1rem;
-  display: inline !important;
+  display: block !important;
   border-radius: 50vw;
   height: 15px;
   line-height: 15px;
   color: white;
-  margin-left: 1vw;
+  margin-right:5px;
+}
+.tag-container{
+  display: flex;
+
 }
 .post-list > li{
   display: flex;

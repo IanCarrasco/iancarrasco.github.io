@@ -17,8 +17,10 @@ layout: default
             <a class="post-link" href="{{ post.url | relative_url }}">
               {{ post.title | escape }}
             </a>
+          </div>
+          <div class="tag-container">
             {%- for category in post.categories -%}
-                <span class="post-tag {{category}}-tag">{{category}}</span>
+            <span class="post-tag {{category}}-tag">{{category}}</span>
             {%- endfor -%}
           </div>
           {%- if site.show_excerpts -%}
