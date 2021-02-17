@@ -4,7 +4,6 @@
 
 layout: page
 custom_css: homepage
-title: Home
 ---
 <!-- <img class="profile-pic" src="/assets/circleimage.png"> -->
 <br/>
