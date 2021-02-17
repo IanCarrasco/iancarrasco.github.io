@@ -464,7 +464,7 @@ p { width: 100% !important; }
 
 @media screen and (max-width: 600px) { .site-nav { background-color: #222 !important; border: 0px !important; } .wrapper { width: 90vw !important; } }
 
-.post-tag { background-color: green; width: fit-content; padding: 7px; font-size: 1rem; display: block !important; border-radius: 50vw; height: 15px; line-height: 15px; color: white; margin-right: 5px; }
+.post-tag { background-color: green; width: fit-content; padding: 7px; font-size: 1rem; display: block !important; border-radius: 50vw; height: 15px; line-height: 15px; color: white; margin-right: 5px !important; margin-left: 0px !important; }
 
 .tag-container { display: flex; }
 
