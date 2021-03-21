@@ -5,7 +5,7 @@
 layout: page
 custom_css: homepage
 ---
-<!-- <img class="profile-pic" src="/assets/circleimage.png"> -->
+<img class="profile-pic" src="/assets/circleimage.png">
 <br/>
 
 # Hi, I'm Ian.

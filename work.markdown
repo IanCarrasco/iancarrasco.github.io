@@ -15,5 +15,5 @@ custom-css: work
 >Developed domain-specific modeling techniques for anomaly detection in mail
 >server logs using Splunk and Python. Additionally, built a notification system using the Slack API to reduce incident triage times from several days to ~2 hours.
 
-### <span class="orange">Summer 2018</span> | Software Engineering Intern @ HERE Maps
+### Software Engineering Intern @ HERE Maps | <span class="orange">Summer 2018</span> 
 >Integrated React and MobX to visualize high frequency car sensor data for car manufacturers to simulate road hazard events and analyze specific product offerings.
