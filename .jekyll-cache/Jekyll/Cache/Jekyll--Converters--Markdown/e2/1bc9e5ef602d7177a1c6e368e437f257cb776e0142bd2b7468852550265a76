@@ -1,4 +1,4 @@
-I"�	<p>This page is going to be an ongoing list of notes from talks/lectures/books I’ve watched and read.</p>
+I"<p>This page is going to be an ongoing list of notes from talks/lectures/books I’ve watched and read.</p>
 
 <h2 id="ajay-banga---taking-risks-in-your-life-and-career">Ajay Banga - Taking Risks in Your Life and Career</h2>
 <ul>
@@ -34,4 +34,35 @@ This was heavily emphasized due to the large time and financial investment with 
 a project runs longer than expected, there is still room to stay on schedule in the near-term.</li>
 </ul>
 
+<h2 id="john-ousterhout---a-philosophy-of-software-design-talk">John Ousterhout - A Philosophy of Software Design Talk</h2>
+
+<ul>
+  <li>
+    <p>Build deeper classes as opposed to shallow classes. Don’t have interfaces whose cost of use is greater than the functionality it wraps (benefit). Treating classes in this cost benefit analysis approach can reduce complexity.</p>
+  </li>
+  <li>
+    <p>Create deep abstractions, don’t add layers where they are not needed.</p>
+  </li>
+  <li>
+    <p>The common use case for a given class should be easy, but still make edge cases possible.</p>
+  </li>
+  <li>Minimize places exceptions are caught.
+    <ul>
+      <li>Exceptions are most useful when they are thrown far.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Design software for the future, going 10% slower today to make the right design choices, as they propagate in an engineering org.</p>
+  </li>
+  <li>Tactical programmers just aim to have something work with minimal consideration of software design.
+    <ul>
+      <li>Having an engineering cultures that value software design principles attracts top talent.</li>
+    </ul>
+  </li>
+  <li>Hire for slope not y-intercept.
+    <ul>
+      <li>Potential to learn quickly and grow (slope), is more valuable than the experience coming in (y-intercept), in most cases.</li>
+    </ul>
+  </li>
+</ul>
 :ET
