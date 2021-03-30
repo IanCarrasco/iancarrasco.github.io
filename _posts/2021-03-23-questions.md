@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My Thoughts on Questions"
-date:   2020-09-25 11:05:52 -0700
+date:   2021-03-29 11:05:52 -0700
 categories: Perspective
 published: true
 custom_css: talks
