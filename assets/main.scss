@@ -7,7 +7,13 @@
 @font-face{
 
     font-family: "Inter";
-    src:url('./fonts/Inter (OTF)/Inter-Light-BETA.otf');
+    src:url('./fonts/Inter (OTF)/Inter-Regular.otf');
+  
+  }
+  @font-face{
+
+    font-family: "InterSemi";
+    src:url('./fonts/Inter (OTF)/Inter-SemiBold.otf');
   
   }
   @font-face{
@@ -35,7 +41,7 @@
   body{
     color:#fff !important;
     background-color: #000;
-    font-family: 'Colfax';
+    font-family: 'Inter';
     font-kerning: none !important;
     letter-spacing: 0;
   }
@@ -71,7 +77,7 @@
   blockquote{
   }
   .post-title{
-
+    font-family: "InterSemi";
   }
   .wrapper{
     width: 50vw;

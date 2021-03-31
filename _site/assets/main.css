@@ -408,7 +408,9 @@ pre, code { background: #31343f !important; font-family: "SFMono"; }
 
 .highlight .gi { color: #a6e22e; }
 
-@font-face { font-family: "Inter"; src: url("./fonts/Inter (OTF)/Inter-Light-BETA.otf"); }
+@font-face { font-family: "Inter"; src: url("./fonts/Inter (OTF)/Inter-Regular.otf"); }
+
+@font-face { font-family: "InterSemi"; src: url("./fonts/Inter (OTF)/Inter-SemiBold.otf"); }
 
 @font-face { font-family: "Colfax"; src: url("./fonts/colai/ColfaxAI-Regular.woff2"); }
 
@@ -418,7 +420,7 @@ pre, code { background: #31343f !important; font-family: "SFMono"; }
 
 @font-face { font-family: "IBM Plex"; src: url("./fonts/IBMPlexSerif-Regular.otf"); }
 
-body { color: #fff !important; background-color: #000; font-family: 'Colfax'; font-kerning: none !important; letter-spacing: 0; }
+body { color: #fff !important; background-color: #000; font-family: 'Inter'; font-kerning: none !important; letter-spacing: 0; }
 
 a { color: #fff !important; }
 
@@ -431,6 +433,8 @@ body { -webkit-scrollbar-width: thin !important; -webkit-scrollbar-color: #333 #
 .site-header { position: sticky; margin-top: 10px; top: 0px; background-color: #000; color: #fff !important; border: 0px !important; }
 
 .site-title { color: #fff !important; }
+
+.post-title { font-family: "InterSemi"; }
 
 .wrapper { width: 50vw; }
 
