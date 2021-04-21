@@ -5,6 +5,7 @@ date:   2021-03-29 11:05:52 -0700
 categories: Perspective
 published: true
 custom_css: talks
+permalink: blog/questions
 ---
 Questions are often seen (incorrectly) in many scenarios as illuminating one's lack of understanding. I mean you are asking a question because you didn't fully understand some information presented to you, right? 
 

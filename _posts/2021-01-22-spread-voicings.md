@@ -3,7 +3,7 @@ layout: post
 title:  "Two Spread Voicings for Jazz Piano"
 date:   2021-1-22 11:05:52 -0700
 categories: Music
-published: true
+published: false
 ---
 The chords used in jazz piano evoke a certain quality and richness that is achieved through the use of extensions and open voicings. Here, I quickly talk about two particular examples derived from Herbie Hancock and Kenny Barron that I particularly like.
 

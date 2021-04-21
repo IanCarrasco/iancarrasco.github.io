@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-  <title>Ian Carrasco | Software Engineer and Musician</title>
+  <title>Notes from Talks/Books | Ian Carrasco</title>
   <meta name="generator" content="Jekyll v4.0.0" />
   <meta property="og:title" content="Ian Carrasco" />
   <meta property="og:locale" content="en_US" />
@@ -39,6 +39,10 @@
 </script>
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Ian Carrasco" /></head>
 
+  
+  <link rel="stylesheet" href="/assets/talks.css">
+  
+
 
 </head><body><header class="site-header" role="banner">
 
@@ -60,36 +64,82 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Introducing the NeuroAI Series</h1>
+    <h1 class="post-title p-name" itemprop="name headline">Notes from Talks/Books</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2020-01-15T10:05:52-08:00" itemprop="datePublished">Jan 15, 2020
+      <time class="dt-published" datetime="2020-09-25T11:05:52-07:00" itemprop="datePublished">Sep 25, 2020
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p style="text-align: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Rat_hippocampus_stained_with_antibody_to_NeuN_%28green%29%2C_myelin_basic_protein_%28red%29_and_DNA_%28blue%29.jpg" alt="" height="300" /></p>
+    <p>This page is going to be an ongoing list of notes from talks/lectures/books I’ve watched and read.</p>
 
-<p class="image-caption">NeuN Stain of a Rat Hippocampus</p>
-<h3 id="motivation">Motivation</h3>
-<p>In the coming posts, I’m going to break down some
-of the foundational and recent work in neuroscience-inspired
-AI or NeuroAI for short. I believe this field has a lot of 
-promise in regards to building systems that have general 
-intelligence and reasoning capabilities. In their current state, deep learning architectures under-represent
-several of the structural and dynamical aspects of neurons and their corresponding networks seen in the brain. Some 
-of these aspects include cell diversity, spatial organization, and neuromodulation.</p>
+<h2 id="ajay-banga---taking-risks-in-your-life-and-career">Ajay Banga - Taking Risks in Your Life and Career</h2>
+<ul>
+  <li>Going into a new company with a mindset of trying to learn from everyone.
+    <ul>
+      <li>Everyone knows something that you don’t.</li>
+      <li>Have humility, but be bold enough to take risks.</li>
+    </ul>
+  </li>
+  <li>You have to enjoy what you are doing FIRST! If you aren’t, find it.</li>
+  <li>Take the time for what matters (Health, Family, Relationships)
+    <ul>
+      <li>And make sure to spend that time with people not devices</li>
+    </ul>
+  </li>
+  <li>Important to consider what <strong>and how</strong> you do something</li>
+  <li>Deal with adversity, don’t try to avoid it.</li>
+</ul>
 
-<p>While taking the approach of applying known phenomena from neuroscience to AI can lead to interesting, novel developments, it
-is still in its infancy. A more common approach that is to ask if existing mechanisms are biologically plausible. It could very well be the case that staying true to biological limitations may not be the proper approach. One such reason could be due to the fundamental differences in computation that occur across different substrates (human brains and computers). Continuing with this point, neuroscience should be viewed as a source of inspiration rather than a guide to follow strictly. As more developments occur,this dichotomy might change but only time will tell. I find this area to be particularly exciting as it makes one consider the assumptions made about the brain that influenced the design of artificial neural networks. Additionally and most importantly, it provides a basis to challenge these assumptions with new algorithms and architectures.</p>
+<h2 id="ashlee-vance---elon-musk-biography">Ashlee Vance - Elon Musk Biography</h2>
+<ul>
+  <li>Be <strong>highly data-driven</strong> and <strong>rational</strong> when making decisions and analyzing failures. This can be through extensively logging metrics, adding new sensors, etc… <strong>Prevent making the same mistake twice at all costs</strong>.
+This was heavily emphasized due to the large time and financial investment with SpaceX testing, but still should be generally applicable.</li>
+  <li>Principles First Thinking - <strong>Don’t accept ideas on the basis of them being around for a long time</strong>.
+    <ul>
+      <li>What made Tesla and SpaceX so innovative was the removal of a lot of the beureaucratic, slow development cycles that have plagued the automotive and aerospace industries. Think if an important component of a product can be redesigned to be faster, better, and cheaper, before accepting existing options. If the investment in optimizing this one part is too high that it could stunt overall progress, then evaluate other options.</li>
+    </ul>
+  </li>
+  <li>Listen to well-structured arguments and don’t base resulting decisions on the merits of the people presenting them, but rather the argument in its logical form.</li>
+  <li>Loyalty and determination arises in the presence of adversity.</li>
+  <li>Try to <strong>surround yourself with the best</strong>. Know the places that the people you look up to frequent.</li>
+  <li><strong>Set ambitious deadlines</strong> in order to have work materialize faster. In the case that
+a project runs longer than expected, there is still room to stay on schedule in the near-term.</li>
+</ul>
 
-<p>The first post in the series will be about the principle of <strong>Hebbian Learning</strong>. Which is colloquially known via the popular phrase
-“neurons that fire together wire together”. We will first look at the principle from a neuroscience lens, then move into its
-computational formulation by looking at a paper by Miconi, Clune, et al. (Uber AI), <em>Differentiable plasticity: training plastic neural networks with backpropagation</em>.</p>
+<h2 id="john-ousterhout---a-philosophy-of-software-design-talk">John Ousterhout - A Philosophy of Software Design Talk</h2>
 
-<p>Stay Tuned.</p>
+<ul>
+  <li>
+    <p>Build deeper classes as opposed to shallow classes. Don’t have interfaces whose cost of use is greater than the functionality it wraps (benefit). Treating classes in this cost benefit analysis approach can reduce complexity.</p>
+  </li>
+  <li>
+    <p>Create deep abstractions, don’t add layers where they are not needed.</p>
+  </li>
+  <li>
+    <p>The common use case for a given class should be easy, but still make edge cases possible.</p>
+  </li>
+  <li>Minimize places exceptions are caught.
+    <ul>
+      <li>Exceptions are most useful when they are thrown far.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Design software for the future, going 10% slower today to make the right design choices, as they propagate in an engineering org.</p>
+  </li>
+  <li>Tactical programmers just aim to have something work with minimal consideration of software design.
+    <ul>
+      <li>Having an engineering cultures that value software design principles attracts top talent.</li>
+    </ul>
+  </li>
+  <li>Hire for slope not y-intercept.
+    <ul>
+      <li>Potential to learn quickly and grow (slope), is more valuable than the experience coming in (y-intercept), in most cases.</li>
+    </ul>
+  </li>
+</ul>
 
-
-  </div><a class="u-url" href="/ai/neuro/2020/01/15/intronai.html" hidden></a>
+  </div><a class="u-url" href="/blog/notes-talks-books" hidden></a>
 </article>
 
       </div>

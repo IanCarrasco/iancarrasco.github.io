@@ -4,6 +4,7 @@ title:  "Technological Inertia"
 date:   2019-12-22 11:05:52 -0700
 categories: Perspective
 published: true
+permalink: blog/inertia
 ---
 With the start of the new decade I've been thinking
 about what technologies might define it whether it be
