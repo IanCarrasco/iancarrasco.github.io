@@ -1,0 +1,27 @@
+I"ñ<h3 id="software-engineer--google--present">Software Engineer @ Google | <span class="orange">Present</span></h3>
+<blockquote>
+  <p>Working on the next generation of maps.</p>
+</blockquote>
+
+<h3 id="ml-engineering-intern--servicenow--summer-2020">ML Engineering Intern @ ServiceNow | <span class="orange">Summer 2020</span></h3>
+<blockquote>
+  <p>Performed benchmarks and experimented with runtime improvements for document clustering using Python.
+Prototyped an asynchronous training job manager integrating Servicenowâ€™s AI offerings using Python and Falcon.</p>
+</blockquote>
+
+<h3 id="software-engineering-intern--google--winter-2020">Software Engineering Intern @ Google | <span class="orange">Winter 2020</span></h3>
+<blockquote>
+  <p>Researched the use of generative adversarial networks (GANs) using Tensorflow. Developed a novel architecture based on dilated convolutions for generation of images that require spatial context, produced qualitatively better results than Pix2Pix.</p>
+</blockquote>
+
+<h3 id="systems-engineering-intern--servicenow--summer-2019">Systems Engineering Intern @ ServiceNow | <span class="orange">Summer 2019</span></h3>
+<blockquote>
+  <p>Developed domain-specific modeling techniques for anomaly detection in mail
+server logs using Splunk and Python. Additionally, built a notification system using the Slack API to reduce incident triage times from several days to ~2 hours.</p>
+</blockquote>
+
+<h3 id="software-engineering-intern--here-maps--summer-2018">Software Engineering Intern @ HERE Maps | <span class="orange">Summer 2018</span></h3>
+<blockquote>
+  <p>Integrated React and MobX to visualize high frequency car sensor data for car manufacturers to simulate road hazard events and analyze specific product offerings.</p>
+</blockquote>
+:ET

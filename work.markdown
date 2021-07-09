@@ -4,6 +4,9 @@ title: Work
 permalink: /work/
 custom-css: work
 ---
+### Software Engineer @ Google | <span class="orange">Present</span>
+>Working on the next generation of maps.
+
 ### ML Engineering Intern @ ServiceNow | <span class="orange">Summer 2020</span>
 >Performed benchmarks and experimented with runtime improvements for document clustering using Python.
 >Prototyped an asynchronous training job manager integrating Servicenow's AI offerings using Python and Falcon.
