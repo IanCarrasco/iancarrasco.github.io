@@ -1,0 +1,72 @@
+I"�<p>This page is going to be an ongoing list of notes from talks/lectures/books I’ve watched and read.</p>
+
+<h2 id="ajay-banga---taking-risks-in-your-life-and-career">Ajay Banga - Taking Risks in Your Life and Career</h2>
+<ul>
+  <li>Going into a new company with a mindset of trying to learn from everyone.
+    <ul>
+      <li>Everyone knows something that you don’t.</li>
+      <li>Have humility, but be bold enough to take risks.</li>
+    </ul>
+  </li>
+  <li>You have to enjoy what you are doing FIRST! If you aren’t, find it.</li>
+  <li>Take the time for what matters (Health, Family, Relationships)
+    <ul>
+      <li>And make sure to spend that time with people not devices</li>
+    </ul>
+  </li>
+  <li>Important to consider what <strong>and how</strong> you do something</li>
+  <li>Deal with adversity, don’t try to avoid it.</li>
+</ul>
+
+<h2 id="ashlee-vance---elon-musk-biography">Ashlee Vance - Elon Musk Biography</h2>
+<ul>
+  <li>Be <strong>highly data-driven</strong> and <strong>rational</strong> when making decisions and analyzing failures. This can be through extensively logging metrics, adding new sensors, etc… <strong>Prevent making the same mistake twice at all costs</strong>.
+This was heavily emphasized due to the large time and financial investment with SpaceX testing, but still should be generally applicable.</li>
+  <li>Principles First Thinking - <strong>Don’t accept ideas on the basis of them being around for a long time</strong>.
+    <ul>
+      <li>What made Tesla and SpaceX so innovative was the removal of a lot of the beureaucratic, slow development cycles that have plagued the automotive and aerospace industries. Think if an important component of a product can be redesigned to be faster, better, and cheaper, before accepting existing options. If the investment in optimizing this one part is too high that it could stunt overall progress, then evaluate other options.</li>
+    </ul>
+  </li>
+  <li>Listen to well-structured arguments and don’t base resulting decisions on the merits of the people presenting them, but rather the argument in its logical form.</li>
+  <li>Loyalty and determination arises in the presence of adversity.</li>
+  <li>Try to <strong>surround yourself with the best</strong>. Know the places that the people you look up to frequent.</li>
+  <li><strong>Set ambitious deadlines</strong> in order to have work materialize faster. In the case that
+a project runs longer than expected, there is still room to stay on schedule in the near-term.</li>
+</ul>
+
+<h2 id="john-ousterhout---a-philosophy-of-software-design-talk">John Ousterhout - A Philosophy of Software Design Talk</h2>
+
+<ul>
+  <li>Build deeper classes as opposed to shallow classes. <strong>Don’t have interfaces whose cost of use is greater than the functionality it wraps (benefit)</strong>. Treating classes in this cost benefit analysis approach can reduce complexity.</li>
+  <li>Create deep abstractions, <strong>don’t add layers where they are not needed</strong>.</li>
+  <li>The common use case for a given class should be easy, but still make edge cases possible.</li>
+  <li>Minimize places exceptions are caught.
+    <ul>
+      <li>Exceptions are most useful when they are thrown far.</li>
+    </ul>
+  </li>
+  <li><strong>Design software for the future</strong>, going 10% slower today to make the right design choices, as they propagate in an engineering org.</li>
+  <li>Tactical programmers just aim to have something work with minimal consideration of software design.
+    <ul>
+      <li>Having an engineering cultures that value software design principles attracts top talent.</li>
+    </ul>
+  </li>
+  <li>Hire for slope not y-intercept.
+    <ul>
+      <li><strong>Potential to learn quickly and grow (slope), is more valuable than the experience coming in (y-intercept)</strong>, in most cases.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="malcolm-gladwell---talking-to-strangers">Malcolm Gladwell - Talking to Strangers</h2>
+<ul>
+  <li>We live in a truth-default society.
+    <ul>
+      <li>We assume truth because it would be very difficult to operate thinking everything is a lie.</li>
+      <li>Doesn’t mean we shouldn’t be critical, but need to be aware of this bias.</li>
+    </ul>
+  </li>
+  <li>There is a lot we don’t know about people we think we know well.</li>
+  <li></li>
+</ul>
+:ET
