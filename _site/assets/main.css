@@ -412,6 +412,10 @@ pre, code { background: #31343f !important; font-family: "SFMono"; }
 
 @font-face { font-family: "InterSemi"; src: url("./fonts/Inter (OTF)/Inter-SemiBold.otf"); }
 
+@font-face { font-family: "NeueHaas"; src: url("./fonts/NeueHaasGrotDisp-Light.woff2"); }
+
+@font-face { font-family: "Crimson"; src: url("./fonts/CrimsonText-Regular.ttf"); }
+
 @font-face { font-family: "Colfax"; src: url("./fonts/colai/ColfaxAI-Regular.woff2"); }
 
 @font-face { font-family: "ColfaxMedium"; src: url("./fonts/colai/ColfaxAI-Medium.woff2"); }
@@ -444,11 +448,11 @@ body { -webkit-scrollbar-width: thin !important; -webkit-scrollbar-color: #333 #
 
 .post-content h1 { font-size: 1.6rem; font-weight: bold; text-decoration: underline; }
 
-.post-content h4 { font-size: 1.2rem; text-decoration: underline; }
+.post-content h4 { font-size: 1.4rem; text-decoration: underline; }
 
-.post-content p { font-size: 1.1rem; }
+.post-content p { font-size: 1.1rem; font-weight: 100; }
 
-.profile-pic { width: 100px; height: 100px; display: block; }
+.profile-pic { width: 100px; height: 100px; display: block; border-radius: 50%; }
 
 .site-footer { border-image: linear-gradient(to left, #ab58c4 10%, orange 50%, #ff5c5c 85%) 3; border-top: 1px solid #1e1e1e; position: sticky; }
 

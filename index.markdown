@@ -5,11 +5,11 @@
 layout: page
 custom_css: homepage
 ---
-<img class="profile-pic" src="/assets/circleimage.png">
+<img class="profile-pic" src="/assets/avatar21.jpeg">
 <br/>
 
 # Hi, I'm Ian.
-I am software engineer and recent graduate from UC San Diego, interested in developing biologically inspired deep learning algorithms.
+I am software engineer interested in developing biologically inspired deep learning algorithms.
 
 Additionally, I am working to develop systems that can accelerate the adoption of deep learning in new domains and improve productivity.
 

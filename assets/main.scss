@@ -17,6 +17,18 @@
   
   }
   @font-face{
+
+    font-family: "NeueHaas";
+    src:url('./fonts/NeueHaasGrotDisp-Light.woff2');
+  
+  }
+  @font-face{
+
+    font-family: "Crimson";
+    src:url('./fonts/CrimsonText-Regular.ttf');
+  
+  }
+  @font-face{
   
     font-family: "Colfax";
     src:url('./fonts/colai/ColfaxAI-Regular.woff2');
@@ -96,16 +108,18 @@
     text-decoration: underline;
   }
   .post-content h4{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-decoration: underline;
   }
   .post-content p{
     font-size: 1.1rem;
+    font-weight: 100;
   }
   .profile-pic{
     width: 100px;
     height: 100px;
     display: block;
+    border-radius: 50%;
   }
   .site-footer{
     border-image:   linear-gradient(to left, rgb(171, 88, 196) 10%, orange 50%,  rgb(255, 92, 92) 85%) 3;
