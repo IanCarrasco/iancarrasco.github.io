@@ -9,7 +9,7 @@ custom_css: homepage
 <br/>
 
 # Hi, I'm Ian.
-I am software engineer interested in developing biologically inspired deep learning algorithms.
+I'm a software engineer interested in developing biologically inspired deep learning algorithms.
 
 Additionally, I am working to develop systems that can accelerate the adoption of deep learning in new domains and improve productivity.
 

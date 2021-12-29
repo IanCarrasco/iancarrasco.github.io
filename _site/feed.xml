@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://iancarras.co/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iancarras.co/" rel="alternate" type="text/html" /><updated>2021-07-09T00:54:02-07:00</updated><id>http://iancarras.co/feed.xml</id><title type="html">Ian Carrasco</title><subtitle>A blog, resume, and archive of things I'm interested in and have worked on.</subtitle><entry><title type="html">My Thoughts on Questions</title><link href="http://iancarras.co/blog/questions" rel="alternate" type="text/html" title="My Thoughts on Questions" /><published>2021-03-29T11:05:52-07:00</published><updated>2021-03-29T11:05:52-07:00</updated><id>http://iancarras.co/blog/questions</id><content type="html" xml:base="http://iancarras.co/blog/questions">&lt;p&gt;Questions are often seen (incorrectly) in many scenarios as illuminating one’s lack of understanding. I mean you are asking a question because you didn’t fully understand some information presented to you, right?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://iancarras.co/feed.xml" rel="self" type="application/atom+xml" /><link href="http://iancarras.co/" rel="alternate" type="text/html" /><updated>2021-12-29T02:29:30-08:00</updated><id>http://iancarras.co/feed.xml</id><title type="html">Ian Carrasco</title><subtitle>A blog, resume, and archive of things I'm interested in and have worked on.</subtitle><entry><title type="html">My Thoughts on Questions</title><link href="http://iancarras.co/blog/questions" rel="alternate" type="text/html" title="My Thoughts on Questions" /><published>2021-03-29T11:05:52-07:00</published><updated>2021-03-29T11:05:52-07:00</updated><id>http://iancarras.co/blog/questions</id><content type="html" xml:base="http://iancarras.co/blog/questions">&lt;p&gt;Questions are often seen (incorrectly) in many scenarios as illuminating one’s lack of understanding. I mean you are asking a question because you didn’t fully understand some information presented to you, right?&lt;/p&gt;
 
 &lt;p&gt;Questions are much more nuanced than they might seem in the form described above, a form which acts as a barrier for many people to ask questions in the first place. I view questions as one of the most powerful tools for understanding topics deeply, demonstrating knowledge, and having awareness.&lt;/p&gt;
 
@@ -46,15 +46,15 @@ a project runs longer than expected, there is still room to stay on schedule in 
 &lt;h2 id=&quot;john-ousterhout---a-philosophy-of-software-design-talk&quot;&gt;John Ousterhout - A Philosophy of Software Design Talk&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Build deeper classes as opposed to shallow classes. Don’t have interfaces whose cost of use is greater than the functionality it wraps (benefit). Treating classes in this cost benefit analysis approach can reduce complexity.&lt;/li&gt;
-  &lt;li&gt;Create deep abstractions, don’t add layers where they are not needed.&lt;/li&gt;
+  &lt;li&gt;Build deeper classes as opposed to shallow classes. &lt;strong&gt;Don’t have interfaces whose cost of use is greater than the functionality it wraps (benefit)&lt;/strong&gt;. Treating classes in this cost benefit analysis approach can reduce complexity.&lt;/li&gt;
+  &lt;li&gt;Create deep abstractions, &lt;strong&gt;don’t add layers where they are not needed&lt;/strong&gt;.&lt;/li&gt;
   &lt;li&gt;The common use case for a given class should be easy, but still make edge cases possible.&lt;/li&gt;
   &lt;li&gt;Minimize places exceptions are caught.
     &lt;ul&gt;
       &lt;li&gt;Exceptions are most useful when they are thrown far.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Design software for the future, going 10% slower today to make the right design choices, as they propagate in an engineering org.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Design software for the future&lt;/strong&gt;, going 10% slower today to make the right design choices, as they propagate in an engineering org.&lt;/li&gt;
   &lt;li&gt;Tactical programmers just aim to have something work with minimal consideration of software design.
     &lt;ul&gt;
       &lt;li&gt;Having an engineering cultures that value software design principles attracts top talent.&lt;/li&gt;
@@ -62,10 +62,122 @@ a project runs longer than expected, there is still room to stay on schedule in 
   &lt;/li&gt;
   &lt;li&gt;Hire for slope not y-intercept.
     &lt;ul&gt;
-      &lt;li&gt;Potential to learn quickly and grow (slope), is more valuable than the experience coming in (y-intercept), in most cases.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Potential to learn quickly and grow (slope), is more valuable than the experience coming in (y-intercept)&lt;/strong&gt;, in most cases.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="Perspective" /><summary type="html">This page is going to be an ongoing list of notes from talks/lectures/books I’ve watched and read.</summary></entry><entry><title type="html">Technological Inertia</title><link href="http://iancarras.co/blog/inertia" rel="alternate" type="text/html" title="Technological Inertia" /><published>2019-12-22T10:05:52-08:00</published><updated>2019-12-22T10:05:52-08:00</updated><id>http://iancarras.co/blog/technological-inertia</id><content type="html" xml:base="http://iancarras.co/blog/inertia">&lt;p&gt;With the start of the new decade I’ve been thinking
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;malcolm-gladwell---talking-to-strangers&quot;&gt;Malcolm Gladwell - Talking to Strangers&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;We live in a truth-default society.
+    &lt;ul&gt;
+      &lt;li&gt;We assume truth because it would be very difficult to operate thinking everything is a lie.&lt;/li&gt;
+      &lt;li&gt;Doesn’t mean we shouldn’t be critical, but need to be aware of this bias.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;There is a lot we don’t know about people we think we know well.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="Perspective" /><summary type="html">This page is going to be an ongoing list of notes from talks/lectures/books I’ve watched and read.</summary></entry><entry><title type="html">NeuroAI #1 - Hebbian Learning</title><link href="http://iancarras.co/neuro/2020/01/15/hebbian.html" rel="alternate" type="text/html" title="NeuroAI #1 - Hebbian Learning" /><published>2020-01-15T10:05:52-08:00</published><updated>2020-01-15T10:05:52-08:00</updated><id>http://iancarras.co/neuro/2020/01/15/hebbian</id><content type="html" xml:base="http://iancarras.co/neuro/2020/01/15/hebbian.html">&lt;p&gt;&lt;a href=&quot;/assets/pyramidal.jpg&quot;&gt;&lt;img src=&quot;/assets/pyramidal.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p class=&quot;image-caption&quot;&gt;Illustration of a pyramidal neuron in the cerebral cortex by Ramon y Cajal. &lt;br /&gt;&lt;em&gt;Courtesy of the Cajal Institute&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;neuroscientific-considerations&quot;&gt;Neuroscientific Considerations&lt;/h1&gt;
+&lt;h4 id=&quot;the-problem-of-scales&quot;&gt;The Problem Of Scales&lt;/h4&gt;
+
+&lt;p&gt;Understanding how learning occurs in the brain is a key problem in neuroscience. Learning, along with other high level mechanisms (i.e. vision, planning), are difficult to address due to the different scales which they can be analyzed from (i.e. individual neurons -&amp;gt; neural populations -&amp;gt; observable behavior). In some cases, this leads to varying hypotheses about the same underlying process.&lt;/p&gt;
+
+&lt;p&gt;Given the emergent nature of brain structures, there is an inherent coupling between scales. For example, when modeling neural circuit dynamics, the resulting model can be influenced by assumptions of lower-level structure. One assumption in this case is the choice of single neuron model (i.e. Hodgkin-Huxley, Leaky Integrate-and-Fire, etc.) and such a choice could impose new constraints and/or unexpected behaviors. &lt;strong&gt;Essentially, this idea comes down to recognizing when models are interconnected and understanding how assumptions can propagate across scales.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/pyramidal.levels.png&quot;&gt;&lt;img src=&quot;/assets/levels.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p class=&quot;image-caption&quot;&gt;Levels of analysis in the brain &lt;br /&gt;&lt;em&gt;Courtesy of Terrence Sejnowski&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;two-accounts-of-neuro-ai-modeling&quot;&gt;Two Accounts of Neuro-AI Modeling&lt;/h4&gt;
+
+&lt;p&gt;With the consideration of scales addressed, I classify two main approaches towards building computational models that share function(s) with their biological counterparts. This formalization is not exhaustive, but can be used to classify a good portion of neuro/ai papers.&lt;/p&gt;
+
+&lt;p&gt;The first is to &lt;strong&gt;analyze the structure and dynamics of a neural mechanism&lt;/strong&gt; and then &lt;strong&gt;build a computational model consistent with that structure&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The second is to &lt;strong&gt;build a system which can perform an innately human task well&lt;/strong&gt; and then &lt;strong&gt;identify parallels with the brain at computational and representational levels&lt;/strong&gt; [1]. The first approach can be seen as a bottom up/emergent view, whereas the second approach a top-down/distillation view.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span class=&quot;orange&quot;&gt;Bottom-Up/Emergent View (Structure → Behavior)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Attempt to model specific aspects of brain structure (connectivity patterns, cell types, etc.)&lt;/li&gt;
+    &lt;li&gt;Train model on a given task and observe model’s behavior w.r.t human behavior&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;span class=&quot;orange&quot;&gt;Top-Down/Distillation View (Behavior → Structure)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Identify a complex task humans are commonly able to solve&lt;/li&gt;
+    &lt;li&gt;Build a model using existing deep learning approaches to try and solve said task&lt;/li&gt;
+    &lt;li&gt;Observe model’s behavior with respect to human behavior, and draw parallels between model and brain structure after the fact using interpretability techiques (adversarial examples, activation maps, etc.)&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;An instructive example of the bottom up view comes from the topic of studying backpropagation in the brain. In particular, it is common to see analysis of synaptic information processing in the brain observed and then applied to existing computational models. Lillicrap et al. [2], demonstrates this with an biologically plausible form of backpropagation called feedback alignment, which follows from evidence that there is no precise backward connectivity in the brain. With consideration of biological constraints, the authors proposed a model which allows propagation of error signals to hidden layer neurons without an explicit backward pass (no requirement of backward connectivity patterns). This work, along with many others in the space [3] [4] [5], employ a similar approach of taking inspiration from neuroscience studies and adapting specific properties from them to existing deep learning architectures. The topic of biologically plausible techniques for error propagation will be looked at in a future post.&lt;/p&gt;
+
+&lt;p&gt;An example of the top-down approach can best be seen with research of feature extractors in convolutional neural networks (CNNs). Hubel and Wiesel [6] noted that cells in the primary visual cortex (V1) tend to respond to locally oriented edges within small receptive fields. Following this, the neurons in subsequent layers have signficant responses to more complex features (i.e. V4 responding to shape outlines) [7]. Similarly, within CNNs we see this increase in feature complexity as a function of depth through a network This information helps when looking parallels between convolutional layers and visual cortex layers as a function of their depth in a network or pathway. An overview [8] elaborates on this particular relationship.&lt;/p&gt;
+
+&lt;p&gt;With these thoughts aside, we’ll first look at a computational account of learning and synaptic plasticity in the brain known as Hebbian Learning (HL). Then, we’ll draw connections to some classical and modern machine learning architectures inspired by HL including Hopfield Nets, Competing Hidden Units, and Differentiable Plasticity.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/hebb.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;what-is-hebbian-learning&quot;&gt;What is Hebbian Learning?&lt;/h1&gt;
+&lt;p&gt;At it’s core, hebbian learning states that if two artificial neurons &lt;strong&gt;&lt;span class=&quot;green underlit&quot;&gt;i&lt;/span&gt;&lt;/strong&gt; (pre-synaptic) and &lt;strong&gt;&lt;span class=&quot;green underlit&quot;&gt;j&lt;/span&gt;&lt;/strong&gt; (post-synaptic) connected by a synapse, &lt;strong&gt;&lt;span class=&quot;green underlit&quot;&gt;s&lt;/span&gt;&lt;/strong&gt;, the synaptic strength (weight) can be seen as a product of the pre- and post- synaptic activity. In the biological case, this joint, local activity occurs within the range of a small time window (300ms).&lt;/p&gt;
+
+&lt;p&gt;From a causal perspective, timing is an important factor as neuron &lt;strong&gt;&lt;span class=&quot;green underlit&quot;&gt;i&lt;/span&gt;&lt;/strong&gt; has to fire just before neuron &lt;strong&gt;&lt;span class=&quot;green underlit&quot;&gt;j&lt;/span&gt;&lt;/strong&gt; to make a potential claim that i has a role in j’s firing, a case which under Hebb’s model would lead to a synaptic strengthening.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, if the activity of &lt;strong&gt;&lt;span class=&quot;green underlit&quot;&gt;j&lt;/span&gt;&lt;/strong&gt; tends to be uncorrelated to that of &lt;strong&gt;&lt;span class=&quot;green underlit&quot;&gt;i&lt;/span&gt;&lt;/strong&gt; (i.e. j firing before i) then we’d tend to see a weakening of the synapse. The timing of neural activity contributing to both strengthing &lt;strong&gt;and weakening&lt;/strong&gt; is captured by an larger concept, which Hebbian learning falls under, known as Spike Time Dependent Plasticity (STDP), and is a widely accepted explanation for long-term potentiation(strengthening) and depression(weakening) of connectivity in neuron populations.&lt;/p&gt;
+
+&lt;h1 id=&quot;formalization-of-a-hebbian-learning-rule&quot;&gt;Formalization of a Hebbian Learning Rule&lt;/h1&gt;
+&lt;p&gt;For this formalization, we will use the McCullough-Pitts artificial neuron model/binary threshold neuron. Simply put, it computes a weighted sum of input activations and passes it through a threshold function (i.e. step function, sigmoid, etc.).&lt;/p&gt;
+
+\[y_k = \phi(\sum_{i=0}^{n} w_{ik}x_i)\]
+
+\[\Delta w_{ij} = \alpha \cdot x_i \cdot x_j\]
+
+&lt;p&gt;In its most basic form, the hebbian learning rule states that a synaptic weight between neurons i and j (w_ij), are derived from the paired activity of i and j. From this formalization we can note two main cases where w_ij will change significantly.&lt;/p&gt;
+
+&lt;p&gt;Case 1: The signs of neurons i and j are the same (++, –) 
+Case 2: The signs of neurons i and j differ (-+, +-)&lt;/p&gt;
+
+&lt;p&gt;The Hebbian learning account provides an intuitive, experimentally backed framework for describing how synaptic weights change through time-correlated activity between neurons.&lt;/p&gt;
+
+&lt;p&gt;Synapse strengthened (weight adjustment) when post-synaptic response occurs in conjunction with pre-synaptic firing. Pre-synaptic neuron has to fire “just before” post-synaptic neuron so causality can be inferred.&lt;/p&gt;
+
+&lt;p&gt;Hebbian learning is an account of weight adjustment between neurons&lt;/p&gt;
+
+&lt;p&gt;Hebb supports a real-time learning mechanism, where the temporal association of signals is important to the efficacy of a synapse and corresponding learning mechanisms which adjust it&lt;/p&gt;
+
+&lt;p&gt;Non real-time learning error signals computed from system responses/order of inputs and outputs, but not the exact time of occurence of each input/output&lt;/p&gt;
+
+&lt;p&gt;Hebbian LTP is seen in conjunction with Hetero-synaptic long term depression, where the receiving neuron is activated with no activation of the sending neuron. Thus, the pre-synaptic function is a difference of its activation and current synaptic weight&lt;/p&gt;
+
+&lt;p&gt;same signs → strengthen synapse&lt;/p&gt;
+
+&lt;p&gt;opposite signs → weaken synapse&lt;/p&gt;
+
+&lt;h3 id=&quot;hopfield-networks&quot;&gt;Hopfield Networks&lt;/h3&gt;
+&lt;p&gt;A Hopfield Network is a form of recurrent neural network in which all nodes are connected to every other node&lt;/p&gt;
+
+&lt;h3 id=&quot;krotov-et-al-local-neuronal-error&quot;&gt;Krotov et al. Local Neuronal Error&lt;/h3&gt;
+
+&lt;h3 id=&quot;differentiable-plasticity&quot;&gt;Differentiable Plasticity&lt;/h3&gt;
+
+&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;D. Marr, https://dspace.mit.edu/handle/1721.1/5782 (1976)&lt;/li&gt;
+  &lt;li&gt;T. Lillicrap  et al., &lt;em&gt;Random synaptic feedback weights support error backpropagation for deep learning&lt;/em&gt; (2016)&lt;/li&gt;
+  &lt;li&gt;B. Lansdell et al. ,&lt;em&gt;Learning to solve the credit assignment problem&lt;/em&gt; (2019)&lt;/li&gt;
+  &lt;li&gt;I. Jones, K. Kording &lt;em&gt;Can Single Neurons Solve MNIST? The Computational Power of Biological Dendritic Trees&lt;/em&gt; (2020)&lt;/li&gt;
+  &lt;li&gt;J. Hawkins et al., &lt;em&gt;A Framework for Intelligence and Cortical Function Based on Grid Cells in the Neocortex&lt;/em&gt; (2019)&lt;/li&gt;
+  &lt;li&gt;D.H. Hubel, T. N. Wiesel, &lt;em&gt;Receptive fields, binocular interaction and functional architecture in the cat’s visual cortex.&lt;/em&gt; (1962)&lt;/li&gt;
+  &lt;li&gt;A. Pasupathy, C. Connor,&lt;em&gt;Population coding of shape in area V4.&lt;/em&gt; (2002)&lt;/li&gt;
+  &lt;li&gt;G. Lindsay &lt;em&gt;Convolutional Neural Networks as a Model of the Visual
+System: Past, Present, and Future&lt;/em&gt; (2020)&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Neuro" /><summary type="html"></summary></entry><entry><title type="html">Technological Inertia</title><link href="http://iancarras.co/blog/inertia" rel="alternate" type="text/html" title="Technological Inertia" /><published>2019-12-22T10:05:52-08:00</published><updated>2019-12-22T10:05:52-08:00</updated><id>http://iancarras.co/blog/technological-inertia</id><content type="html" xml:base="http://iancarras.co/blog/inertia">&lt;p&gt;With the start of the new decade I’ve been thinking
 about what technologies might define it whether it be
 (AR, AI, Edge Computing, 5G, etc.). When evaluating 
 developments and trends in consumer tech and research, I found

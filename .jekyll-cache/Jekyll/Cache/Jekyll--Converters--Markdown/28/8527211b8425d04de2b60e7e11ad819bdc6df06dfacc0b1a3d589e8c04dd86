@@ -1,4 +1,4 @@
-I"�<p>This page is going to be an ongoing list of notes from talks/lectures/books I’ve watched and read.</p>
+I"�<p>This page is going to be an ongoing list of notes from talks/lectures/books I’ve watched and read.</p>
 
 <h2 id="ajay-banga---taking-risks-in-your-life-and-career">Ajay Banga - Taking Risks in Your Life and Career</h2>
 <ul>
@@ -36,7 +36,19 @@ a project runs longer than expected, there is still room to stay on schedule in 
 
 <h2 id="john-ousterhout---a-philosophy-of-software-design-talk">John Ousterhout - A Philosophy of Software Design Talk</h2>
 
+<p>«««&lt; HEAD</p>
 <ul>
+  <li>Build deeper classes as opposed to shallow classes. <strong>Don’t have interfaces whose cost of use is greater than the functionality it wraps (benefit)</strong>. Treating classes in this cost benefit analysis approach can reduce complexity.</li>
+  <li>Create deep abstractions, <strong>don’t add layers where they are not needed</strong>.</li>
+  <li>The common use case for a given class should be easy, but still make edge cases possible.</li>
+  <li>Minimize places exceptions are caught.
+    <ul>
+      <li>Exceptions are most useful when they are thrown far.</li>
+    </ul>
+  </li>
+  <li>
+    <h1 id="design-software-for-the-future-going-10-slower-today-to-make-the-right-design-choices-as-they-propagate-in-an-engineering-org"><strong>Design software for the future</strong>, going 10% slower today to make the right design choices, as they propagate in an engineering org.</h1>
+  </li>
   <li>Build deeper classes as opposed to shallow classes. Don’t have interfaces whose cost of use is greater than the functionality it wraps (benefit). Treating classes in this cost benefit analysis approach can reduce complexity.</li>
   <li>Create deep abstractions, don’t add layers where they are not needed.</li>
   <li>The common use case for a given class should be easy, but still make edge cases possible.</li>
@@ -45,7 +57,23 @@ a project runs longer than expected, there is still room to stay on schedule in 
       <li>Exceptions are most useful when they are thrown far.</li>
     </ul>
   </li>
-  <li>Design software for the future, going 10% slower today to make the right design choices, as they propagate in an engineering org.</li>
+  <li>Design software for the future, going 10% slower today to make the right design choices, as they propagate in an engineering org.
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <blockquote>
+                <blockquote>
+                  <p>d9e8742739f947097537077a22eceb253657a7a6</p>
+                </blockquote>
+              </blockquote>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </li>
   <li>Tactical programmers just aim to have something work with minimal consideration of software design.
     <ul>
       <li>Having an engineering cultures that value software design principles attracts top talent.</li>
@@ -53,8 +81,20 @@ a project runs longer than expected, there is still room to stay on schedule in 
   </li>
   <li>Hire for slope not y-intercept.
     <ul>
-      <li>Potential to learn quickly and grow (slope), is more valuable than the experience coming in (y-intercept), in most cases.</li>
+      <li><strong>Potential to learn quickly and grow (slope), is more valuable than the experience coming in (y-intercept)</strong>, in most cases.</li>
     </ul>
   </li>
+</ul>
+
+<h2 id="malcolm-gladwell---talking-to-strangers">Malcolm Gladwell - Talking to Strangers</h2>
+<ul>
+  <li>We live in a truth-default society.
+    <ul>
+      <li>We assume truth because it would be very difficult to operate thinking everything is a lie.</li>
+      <li>Doesn’t mean we shouldn’t be critical, but need to be aware of this bias.</li>
+    </ul>
+  </li>
+  <li>There is a lot we don’t know about people we think we know well.</li>
+  <li></li>
 </ul>
 :ET
