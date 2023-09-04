@@ -1585,8 +1585,8 @@ a[href^="http"] {
 }
 .home-content{
     display: flex;
+    width: 95vw;
     flex-direction: column;
-    justify-content: center;
 }
 
 .navbar-home-start {
