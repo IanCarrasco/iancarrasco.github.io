@@ -1555,7 +1555,12 @@ a[href^="http"] {
 
 .home-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding:15px;
 }
 
 .home-image {
@@ -1578,9 +1583,18 @@ a[href^="http"] {
     color: var(--color-text-sub);
     padding-top: var(--padding-thin);
 }
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-.home-intro {
-    padding: 5% 10%;
+.navbar-home-start {
+    padding-top: 15px;
+}
+.navbar-home-item {
+    color:white;
+    margin-right: 15px;
 }
 
 @media screen and (max-width:320px)
