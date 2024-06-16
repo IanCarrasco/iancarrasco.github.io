@@ -1,1 +1,0 @@
-[[Chapter 1 - Neural Encoding I - Firing Rates and Spike Statistics]]

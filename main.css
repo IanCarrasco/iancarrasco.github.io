@@ -1,0 +1,11 @@
+@font-face{
+    font-family:'SupplyMono';
+    src:url('PPSupplyMono-Regular.woff2') format('woff2');
+
+}
+
+html{
+    font-family:'SupplyMono';
+    font-style:'normal';
+    font-weight:'600';
+}
