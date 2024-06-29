@@ -1,11 +1,53 @@
-@font-face{
-    font-family:'SupplyMono';
-    src:url('PPSupplyMono-Regular.woff2') format('woff2');
+.bold {
+    font-weight: 600;
+}
 
+.normal {
+    font-weight: 400;
+}
+
+.light {
+    font-weight: 200;
 }
 
 html{
-    font-family:'SupplyMono';
-    font-style:'normal';
-    font-weight:'600';
+    padding: 5vw;
+}
+
+.light-grey {
+    color:rgb(192, 196, 200);
+}
+
+.icon-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.icon-container i{
+    margin-right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+body{
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .content-block{
+        width: 77vw;
+    } 
+}
+
+@media (min-width: 600px) {
+    .content-block{
+        width: 40vw;
+    } 
 }
