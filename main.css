@@ -24,7 +24,7 @@ html{
 .icon-container i{
     font-size: 20px;
     cursor: pointer;
-    color: #000;
+    color: #262626;
 }
 
 .name-header{
@@ -55,7 +55,7 @@ html{
 
 html {
     background-color: white;
-    color: #000;
+    color: #262626;
 }
 
 body{
@@ -80,7 +80,7 @@ body{
 
 .post-link{
     cursor: pointer;
-    color: #000000;
+    color: #262626;
     transition: 0.2s;
     font-weight: 300;
     font-size: 1rem;
@@ -90,7 +90,7 @@ body{
 
 .post-link-title{
     text-decoration: none;
-    color: #000000;
+    color: #262626;
     transition: color 0.2s ease;
 }
 
