@@ -1,0 +1,775 @@
+<html><head><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><link rel="icon" href="../../ian_monogram.png"><title>Notes on LLM Sampling</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+	font-family: "Newsreader", serif;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+	font-family: "Newsreader", serif;
+}
+
+html,
+body {
+	margin-left: 28vw;
+	margin-right: 28vw;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 400;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style>
+</head><body><article id="27d3fb88-53c9-8060-9b29-dc73bad396be" class="page sans"><header><h1 class="page-title">Notes on LLM Sampling</h1><p class="page-description"></p></header><div class="page-body"><p id="27d3fb88-53c9-806b-8151-ca77044325b4" class=""><time>@Sep 29</time> </p><h2 id="27d3fb88-53c9-8084-af6c-dbeff3a728ff" class="">Background</h2><p id="27e3fb88-53c9-804c-a5d7-f95cd3d23068" class="">The goal of decoder-based LLM training (i.e. GPT) is to produce a model that can an accurately learn a probability distribution over the next token in a sequence conditioned on all prior tokens and the current token (autoregressive). With the idea that given a new sequence of input tokens, the model has learned enough semantics/structure from the training data to produce novel, coherent text generations. In this article, we assume we have a pre-trained model and now we are trying to use that model to generate text (aka sampling from the model).</p><p id="28a3fb88-53c9-806d-a6b7-c2c17d133174" class="">
+</p><p id="28a3fb88-53c9-801f-bbea-ccf3a320eafc" class="">To formalize this, we are sampling from a discrete probability distribution of possible output tokens (the number of possible output tokens is determined by the vocabulary size of the tokenizer used during training). In the case of GPT-2, the possible output tokens would be 50,257 (vocab_size).  </p><p id="28a3fb88-53c9-8059-ae0b-da9b8a11d725" class="">
+</p><p id="28a3fb88-53c9-8057-89b7-daa697faae56" class="">For more considerations about vocabulary sizes and how they affect LLM performance there is a good article <a href="https://www.rohan-paul.com/p/tutorial-balancing-vocabulary-size">here</a>.</p><h2 id="27e3fb88-53c9-80ef-a9e0-f1c32626f068" class="">Random Sampling</h2><p id="27e3fb88-53c9-8061-93cb-c319c2dcefb8" class="">The most naive form of sampling is simply to choose a token from the vocabulary <strong>at random</strong> at each decoding step until a stop token is selected or a maximum output size is reached. This approach should almost never be used as it ignores all the statistical structure of the data the model was trained on.</p><h2 id="27d3fb88-53c9-801c-9085-ff96ca111d30" class="">Greedy Sampling</h2><p id="27e3fb88-53c9-8053-ad6a-c52aff343a67" class="">The first natural extension is to incorporate the statistics the model has learned next token <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">x_{t+1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6389em;vertical-align:-0.2083em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span> with respect to all previous tokens in the sequence <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><msub><mi>x</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">x_0...x_t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5806em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">...</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></p><figure id="27e3fb88-53c9-803f-a44c-d0ac13aa3575" class="equation"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><div class="equation-container"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>P</mi><mo stretchy="false">(</mo><msub><mi>x</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mtext> </mtext><mi mathvariant="normal">∣</mi><msub><mi>x</mi><mi>t</mi></msub><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">P(x_{t+1}\ | x_t...x_{0})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">t</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2083em;"><span></span></span></span></span></span></span><span class="mspace"> </span><span class="mord">∣</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.2806em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">...</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></div></figure><p id="27e3fb88-53c9-8065-ad2e-eacab2bb695c" class="">If the model was trained properly, one approach is to select the next token by choosing the the token with the<strong> highest model-assigned probability</strong> at each step. In PyTorch that would look something like this:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="27e3fb88-53c9-8000-a724-ca71fcca878e" class="code code-wrap"><code class="language-Python" style="white-space:pre-wrap;word-break:break-all">result = &quot;&quot;
+while len(result) &lt;= max_output_size:
+	next_token_logits = # Output from forward pass of LLM with shape: (vocab_size,)
+	next_token_probs = F.softmax(next_token_logits, dim=0) # Convert to probability distribution over tokens
+	next_token_idx = torch.argmax(next_token_probs).item() # sample a single token idx greedily
+	next_token = itos[next_token_idx] # Get the corresponding token for the index
+	# Stop generation once we encounter special end of sequence token
+	if next_token == &#x27;&lt;EOS&gt;&#x27;:
+		break
+	result += next_token
+...
+</code></pre><p id="27e3fb88-53c9-80bf-b797-ec96b7dc4d00" class="">Greedily selecting the highest probability next tokens in theory should produce high quality outputs and commonly does, however there are quite a few failure modes discussed <a href="https://arxiv.org/abs/1904.09751">here</a> (limited output diversity and looping behavior). </p><h2 id="28a3fb88-53c9-80e3-ad71-f0d310d642b5" class="">Weighted Sampling</h2><p id="27e3fb88-53c9-80fa-96cf-f483d18cf37b" class="">A more common starting point is to sample the next token weighted by the model-assigned probabilities. For example, if a token has an 80% probability under the model it should be sampled around 80% of the time conditioned on the same input sequence etc. This approach is often favored as it will increase output diversity and alleviate some of the above failure modes. </p><p id="28a3fb88-53c9-804e-93b8-f71a2782e1f3" class="">That can be implemented with a one line change to the above code.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="27e3fb88-53c9-8036-8344-d044748e132e" class="code code-wrap"><code class="language-Python" style="white-space:pre-wrap;word-break:break-all">result = &quot;&quot;
+while len(result) &lt;= max_output_size:
+	next_token_logits = # Output from forward pass of LLM with shape: (vocab_size,)
+	next_token_probs = F.softmax(next_token_logits, dim=0) # Convert to probability distribution over tokens
+	next_token_idx = torch.multinomial(next_token_probs, 1).item() #samples a single token idx weighted by next_token_probs	next_token = itos[next_token_idx] # Get the corresponding token for the index
+	# Stop generation once we encounter special end of sequence token
+	if next_token == &#x27;&lt;EOS&gt;&#x27;:
+		break
+	result += next_token
+...
+</code></pre><p id="27e3fb88-53c9-8081-b6d1-f25e412d47c4" class="">
+</p><p id="27e3fb88-53c9-8027-9aad-d57326f211e0" class="">With this change to sampling from the next token, we can conveniently introduce a single hyperparameter that can control between random, greedy, and weighted sampling called <strong>temperature.</strong></p><h2 id="27e3fb88-53c9-80bc-9f63-e426f23c6483" class="">Temperature</h2><p id="27d3fb88-53c9-8078-8f8e-de4452df57b7" class="">Under the hood, temperature is simply a number which we divide the log-probs (logits) by prior to converting them into a probability distribution via softmax. As temperature increases it has the effect of flattening/smoothing out the next token distribution (i.e. making the probability of selecting any one token more uniform) and in the opposite case (i.e. boosting. high probability tokens). We illustrate the effects of using different temperature values below.</p><p id="27d3fb88-53c9-8065-bc33-f1b8095ae2b2" class="">
+</p><figure id="27d3fb88-53c9-8042-a1b2-c5b72efe7cf8" class="image"><a href="images/Screenshot_2025-09-29_at_6.29.35_PM.png"><img style="width:382px" src="images/Screenshot_2025-09-29_at_6.29.35_PM.png"/></a></figure><p id="27d3fb88-53c9-8046-8144-dcb651ff9e9b" class="">
+</p><figure id="27e3fb88-53c9-80c5-87be-cd06d14a3b0f" class="image"><a href="images/Screenshot_2025-09-29_at_11.47.17_PM.png"><img style="width:2470px" src="images/Screenshot_2025-09-29_at_11.47.17_PM.png"/></a></figure><h3 id="27d3fb88-53c9-8006-a195-c86925d22c3b" class="">Case 1: Temperature = 0 (Greedy Sampling)</h3><p id="27d3fb88-53c9-8080-9ac7-ca4d9f3fba76" class="">Selects the token with the highest probability assigned by the model aka greedy sampling</p><h3 id="27d3fb88-53c9-801c-888c-f0835ec45245" class="">Case 2: Temperature &lt; 1</h3><p id="27d3fb88-53c9-80b7-8c38-c05202dc5430" class="">Boosts highly probable tokens initially assigned by the model while down-weighting low probability tokens, introduces some variability so the max probability token isn’t always selected leading to more diverse outputs while still respecting the original distribution for the most part.</p><h3 id="27d3fb88-53c9-80f0-8ae9-cd98e9fd8bce" class="">Case 3: Temperature = 1</h3><p id="27d3fb88-53c9-80dd-9592-d60c3bd7b345" class="">This is the no-op case where we just preserve the original probabilities predicted by the model since its just a division by 1.</p><h3 id="27d3fb88-53c9-80b9-9e63-d7ebf7a826e1" class="">Case 4: Temperature &gt; 1</h3><p id="27d3fb88-53c9-801c-8788-ce02f476f4e5" class="">As the temperature tends to larger values it has the effect of smoothing the probability distribution over next tokens to become more and more uniform. This further increases diversity at the expense of reducing reliance on statistical patterns learned by the LLM during training.</p><h3 id="27e3fb88-53c9-80e2-888d-f1b6bf705094" class="">Temperature and Reasoning Models</h3><p id="27e3fb88-53c9-80d0-bb8d-da0f1b1678ed" class="">Notably, OpenAI&#x27;s GPT-5 series of reasoning models do not expose temperature as a configurable parameter via the API. Although not officially confirmed, some reasons could include the fact that reasoning processes performed by these models are complex and may use different temperatures at different stages (exploring potential strategies (high temp) vs. evaluating intermediate results (low temp)). Additionally, for the types of tasks that reasoning models excel at, diversity of output is often less important than correctness, such that having low-temperature values baked in emphasizes accuracy and prevents suboptimal model outputs due to user misconfiguration.</p><p id="27e3fb88-53c9-804c-b7c1-daf4f01cb69b" class="">
+</p><p id="27e3fb88-53c9-8023-a96b-cd17a3a50550" class="">Incorporating temperature into our above sampling code is also a minor change:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="27e3fb88-53c9-803b-b911-c0db7277ba81" class="code code-wrap"><code class="language-Python" style="white-space:pre-wrap;word-break:break-all">result = &quot;&quot;
+temperature = 0.6
+while len(result) &lt;= max_output_size:
+	next_token_logits = # Output from forward pass of LLM with shape: (vocab_size,)
+	next_token_probs = F.softmax(next_token_logits/temperature, dim=0) # Convert to probability distribution over tokens
+	next_token_idx = torch.multinomial(next_token_probs, 1).item() # samples a single token idx weighted by next_token_probs	next_token = itos[next_token_idx] # Get the corresponding token for the index
+	next_token = itos[next_token_idx] # Get the corresponding token for the index
+	# Stop generation once we encounter special end of sequence token
+	if next_token == &#x27;&lt;EOS&gt;&#x27;:
+		break
+	result += next_token
+...
+</code></pre><p id="27e3fb88-53c9-800d-b4d3-d65091d8ddd4" class="">
+</p><h2 id="27e3fb88-53c9-8019-b36d-c4030a6ba31f" class="">Top-k Sampling</h2><p id="27e3fb88-53c9-8075-80be-e8991c8fc179" class="">Top-k sampling is very similar to the above sampling approach except we filter the output distribution to only contain the top-k most probable next tokens prior to choosing. The one thing to keep note of is that the probabilities need to be renormalized amongst the top-k choices such that they sum to 1.</p><p id="2813fb88-53c9-80c4-bc90-efc8f93a9bc2" class="">
+</p><figure id="2813fb88-53c9-8004-9aa1-e2a257065a14" class="image"><a href="images/Screenshot_2025-10-02_at_10.53.20_PM.png"><img style="width:576px" src="images/Screenshot_2025-10-02_at_10.53.20_PM.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2813fb88-53c9-808b-ad99-e56af2870030" class="code code-wrap"><code class="language-Python" style="white-space:pre-wrap;word-break:break-all">result = &quot;&quot;
+temperature = 0.6
+k = 3
+while len(result) &lt;= max_output_size:
+	next_token_logits = # Output from forward pass of LLM with shape: (vocab_size,)
+	next_token_probs = F.softmax(next_token_logits/temperature, dim=0) # Convert to probability distribution over tokens
+	
+	topk_token_vals, topk_token_idxs = torch.topk(next_token_probs, k)
+	
+	topk_token_vals = topk_token_vals / topk_token_vals.sum(dim=0) # Normalize
+	
+	next_token_idx = torch.multinomial(topk_token_vals, 1).item() # samples a single token idx weighted by next_token_prob
+	
+	next_token = itos[topk_token_idxs[next_token_idx]]
+	
+	# Stop generation once we encounter special end of sequence token
+	if next_token == &#x27;&lt;EOS&gt;&#x27;:
+		break
+	result += next_token</code></pre><h2 id="27d3fb88-53c9-8032-8622-cef434d882df" class="">Beam Search</h2><p id="27e3fb88-53c9-80fe-8e80-c5a8c5076be0" class="">Beam search is a deterministic decoding method that finds high-probability sequences by exploring multiple candidate paths simultaneously. It is parameterized by beam_width, which determines how many candidate sequences (beams) we maintain at each step. At each position, we expand all current beams by considering the top-beam_width tokens based on their probability given the current sequence.</p><p id="27e3fb88-53c9-800e-b984-e0ac66b32d30" class="">
+</p><p id="27e3fb88-53c9-8023-924b-dfa3148ea397" class="">At each step, we score candidates by summing the log-probabilities of all tokens in the sequence. We then keep only the top beam_width candidates ranked by cumulative score, discarding the rest. Since log probabilities are negative, adding more tokens makes scores more negative, which inherently biases toward shorter sequences. To counteract this, techniques like length normalization are used to encourage complete, meaningful outputs. The search terminates when beam_width beams have reached an end token (&lt;eos&gt;) or hit the maximum length.&quot;</p><p id="27e3fb88-53c9-8006-a0f3-f5bab13ff908" class="">
+</p><figure id="27e3fb88-53c9-80d7-8a3f-ff9955ecdd9c" class="image"><a href="images/Screenshot_2025-09-30_at_3.46.53_PM.png"><img style="width:576px" src="images/Screenshot_2025-09-30_at_3.46.53_PM.png"/></a></figure><p id="27e3fb88-53c9-80a3-ba2a-ec78775cf3d2" class="">
+</p><h3 id="27e3fb88-53c9-809f-a328-e3cd53a8ed04" class="">When to use this?</h3><p id="27e3fb88-53c9-80c9-9bd2-ef492f16912c" class="">Beam search provides several advantages over traditional sampling, particularly in cases where correctness is important rather than diversity of outputs. Given that beam search tries to find sequences that maximize likelihood, it can help produce more accurate and coherent results. It also has the advantage of being deterministic where given the same input context and beam width, it will generate the same output every time.</p><h2 id="27e3fb88-53c9-8094-a00d-fa72cfedefb8" class="">Nucleus (Top-p) Sampling</h2><p id="27e3fb88-53c9-804b-86b8-c500f063c2b0" class="">A simpler approach than beam search is top-p sampling (also known as nucleus sampling). The concept is similar to top-k, except k is computed dynamically based on cumulative probability. With a p value of 0.95, we select the most probable tokens and sum their probabilities until reaching 0.95, then discard the remaining tokens. The key insight is that the number of candidates changes based on the distribution&#x27;s shape where a more uniform distribution yields more candidates, and vice versa. This contrasts with top-k, where we always select the top-k candidates regardless of their probability mass. This approach effectively tightens or relaxes the nucleus depending on how probability is distributed.</p><p id="28a3fb88-53c9-80e8-b07e-f9542a03c987" class="">
+</p><p id="2813fb88-53c9-80db-81f9-dabbdcd73b9e" class="">In the diagram below the colored bars represent the available candidates and we can observe that the number of candidates increases as the distribution becomes more uniform.</p><figure id="2813fb88-53c9-80c7-9af6-e64d03db957a" class="image"><a href="images/Screenshot_2025-10-02_at_10.48.04_PM.png"><img style="width:709.9566040039062px" src="images/Screenshot_2025-10-02_at_10.48.04_PM.png"/></a></figure><p id="2813fb88-53c9-80a5-92ab-c0c0fdf21168" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
